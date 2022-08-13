@@ -1,0 +1,18 @@
+from scipy import sparse
+import numpy as np
+import sys
+import time
+from scipy.sparse import spdiags,linalg,eye
+
+def setup_case():
+   global  c_omega_1, c_omega_2, cmu, convergence_limit_eps, convergence_limit_k, convergence_limit_om, convergence_limit_pp, \
+   convergence_limit_u, convergence_limit_v, convergence_limit_w, dist,fx, fy,imon,jmon,kappa,k_bc_east,k_bc_east_type, \
+   k_bc_north,k_bc_north_type,k_bc_south, k_bc_south_type,k_bc_west,k_bc_west_type,kom,maxit, \
+   ni,nj,nsweep_kom, nsweep_pp, nsweep_vel,  om_bc_east, om_bc_east_type, om_bc_north, om_bc_north_type, \
+   om_bc_south, om_bc_south_type, om_bc_west, om_bc_west_type, p_bc_east, p_bc_east_type, \
+   p_bc_north, p_bc_north_type, p_bc_south, p_bc_south_type, p_bc_west, p_bc_west_type, \
+   prand_k,prand_omega,resnorm_p,resnorm_vel,restart,save,save_vtk_movie,scheme,scheme_turb,solver_pp,solver_vel, \
+   solver_turb,sormax, u_bc_east, u_bc_east_type, u_bc_north, u_bc_north_type, u_bc_south, u_bc_south_type, u_bc_west, \
+   u_bc_west_type, urfvis, urf_vel, urf_k, urf_p,urf_omega,v_bc_east, v_bc_east_type, v_bc_north, v_bc_north_type, \
+   v_bc_south, v_bc_south_type,v_bc_west, v_bc_west_type,viscos, vol,vtk,vtk_save,vtk_file_name,x2d, xp2d, y2d, yp2d
+

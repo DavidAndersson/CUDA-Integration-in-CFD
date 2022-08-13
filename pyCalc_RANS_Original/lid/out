@@ -1,0 +1,4123 @@
+////////////////// Start of input data ////////////////// 
+
+
+
+
+
+########### section 1 choice of differencing scheme ###########
+scheme:                         h
+scheme_turb:                    h
+
+
+########### section 2 turbulence models ###########
+cmu:                          0.09
+kom:                          False
+
+
+########### section 3 restart/save ###########
+restart:                      False
+save:                         True
+
+
+########### section 4 fluid properties ###########
+viscos:                       1.00e-03
+
+
+########### section 5 relaxation factors ###########
+urfvis:                       0.5
+
+
+########### section 6 number of iteration and convergence criterira ###########
+sormax:                       1e-20
+maxit:                        200
+solver_vel:                   direct
+solver_turb:                  gmres
+nsweep_vel:                   50
+nsweep_pp:                    50
+nsweep_kom:                   1
+convergence_limit_u:          1e-06
+convergence_limit_v:          1e-06
+convergence_limit_pp:         0.0005
+convergence_limit_k:          1e-10
+convergence_limit_om:         1e-10
+
+
+########### section 7 all variables are printed during the iteration at node ###########
+imon:                         50
+jmon:                         30
+
+
+########### section 8 time-averaging ###########
+
+
+########### section 9 residual scaling parameters ###########
+resnorm_p:                    2.0
+resnorm_vel:                  2.0
+
+
+########### Section 10 grid and boundary conditions ###########
+ni:                           60
+nj:                           60
+
+
+
+
+------boundary conditions for u
+     u_bc_west_type:               d
+     u_bc_east_type:               d
+     u_bc_west[0]:                 0.0
+     u_bc_east[0]:                 0.0
+     u_bc_south_type:              d
+     u_bc_north_type:              d
+     u_bc_south[0]:                0.0
+     u_bc_north[0]:                1.0
+------boundary conditions for v
+     v_bc_west_type:               d
+     v_bc_east_type:               d
+     v_bc_west[0]:                 0.0
+     v_bc_east[0]:                 0.0
+     v_bc_south_type:              d
+     v_bc_north_type:              d
+     v_bc_south[0]:                0.0
+     v_bc_north[0]:                0.0
+------boundary conditions for k
+     k_bc_west_type:               d
+     k_bc_east_type:               d
+     k_bc_west[0]:                 0.01
+     k_bc_east[0]:                 0.0
+     k_bc_south_type:              d
+     k_bc_north_type:              n
+     k_bc_south[0]:                0.0
+------boundary conditions for omega
+     om_bc_west_type:              d
+     om_bc_east_type:              n
+     om_bc_west[0]:                1.0
+     om_bc_south_type:             d
+     om_bc_north_type:             n
+     om_bc_south[0]:               14125.2
+
+
+
+ ////////////////// End of input data //////////////////
+
+
+
+hostname:  tfd117.am.chalmers.se
+hybrid scheme, prand= 1
+calcu called
+solve_2d called
+nmax 50
+solver in solve_2d: direct solver
+residual history in solve_2d: initial residual:  3.71e-02              final residual: 3.71e-02                    delta_phi: 3.44e-01
+time u: 9.78e-03
+calcv called
+solve_2d called
+nmax 50
+solver in solve_2d: direct solver
+residual history in solve_2d: initial residual:  7.45e-22              final residual: 7.45e-22                    delta_phi: 3.82e-21
+time v: 7.62e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+calcp called
+solve_2d called
+nmax 50
+solver in solve_2d: direct solver
+residual history in solve_2d: initial residual:  4.91e-03              final residual: 4.91e-03                    delta_phi: 1.89e-01
+correct_u_v_p called
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.67e-03
+
+--iter:0, max residul:1.86e-02, u:1.86e-02, v:3.73e-22, pp:0.00e+00, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   0, u:-3.66e-04, v:-1.01e-03, p: 5.42e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  0, umax: 3.43e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.53e-02
+residual history in solve_2d: initial residual:  2.03e-02              final residual: 2.03e-02                    delta_phi: 1.59e-01
+time u: 7.13e-03
+residual history in solve_2d: initial residual:  1.87e-03              final residual: 1.87e-03                    delta_phi: 6.02e-02
+time v: 6.92e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.16e-03              final residual: 4.16e-03                    delta_phi: 9.80e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:1, max residul:1.01e-02, u:1.01e-02, v:9.36e-04, pp:8.67e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   1, u:-1.15e-03, v:-3.17e-03, p: 6.27e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  1, umax: 5.02e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  1.37e-02              final residual: 1.37e-02                    delta_phi: 9.53e-02
+time u: 7.25e-03
+residual history in solve_2d: initial residual:  2.36e-03              final residual: 2.36e-03                    delta_phi: 8.72e-02
+time v: 6.86e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.65e-03              final residual: 2.65e-03                    delta_phi: 8.24e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:2, max residul:6.86e-03, u:6.86e-03, v:1.18e-03, pp:2.60e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   2, u:-1.77e-03, v:-4.95e-03, p: 3.30e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  2, umax: 5.97e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  1.04e-02              final residual: 1.04e-02                    delta_phi: 8.58e-02
+time u: 7.08e-03
+residual history in solve_2d: initial residual:  1.41e-03              final residual: 1.41e-03                    delta_phi: 5.26e-02
+time v: 6.92e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.69e-03              final residual: 2.69e-03                    delta_phi: 8.81e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:3, max residul:5.20e-03, u:5.20e-03, v:7.04e-04, pp:1.73e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   3, u:-2.04e-03, v:-5.79e-03, p: 9.97e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  3, umax: 6.61e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  8.16e-03              final residual: 8.16e-03                    delta_phi: 6.64e-02
+time u: 7.16e-03
+residual history in solve_2d: initial residual:  9.28e-04              final residual: 9.28e-04                    delta_phi: 3.63e-02
+time v: 6.92e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.43e-03              final residual: 2.43e-03                    delta_phi: 6.27e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:4, max residul:4.08e-03, u:4.08e-03, v:4.64e-04, pp:2.69e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   4, u:-2.18e-03, v:-6.23e-03, p: 1.04e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  4, umax: 7.07e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  6.45e-03              final residual: 6.45e-03                    delta_phi: 4.32e-02
+time u: 7.35e-03
+residual history in solve_2d: initial residual:  9.56e-04              final residual: 9.56e-04                    delta_phi: 4.00e-02
+time v: 7.06e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.87e-03              final residual: 1.87e-03                    delta_phi: 4.23e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.71e-03
+
+--iter:5, max residul:3.22e-03, u:3.22e-03, v:4.78e-04, pp:1.30e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   5, u:-2.39e-03, v:-6.85e-03, p: 1.95e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  5, umax: 7.40e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.24e-02
+residual history in solve_2d: initial residual:  5.27e-03              final residual: 5.27e-03                    delta_phi: 3.61e-02
+time u: 7.18e-03
+residual history in solve_2d: initial residual:  1.07e-03              final residual: 1.07e-03                    delta_phi: 3.84e-02
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.43e-03              final residual: 1.43e-03                    delta_phi: 1.19e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.71e-03
+
+--iter:6, max residul:2.64e-03, u:2.64e-03, v:5.36e-04, pp:1.41e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   6, u:-2.67e-03, v:-7.66e-03, p: 2.19e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  6, umax: 7.65e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  4.58e-03              final residual: 4.58e-03                    delta_phi: 4.37e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  9.46e-04              final residual: 9.46e-04                    delta_phi: 2.99e-02
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.51e-03              final residual: 1.51e-03                    delta_phi: 2.69e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.64e-03
+
+--iter:7, max residul:2.29e-03, u:2.29e-03, v:4.73e-04, pp:8.67e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   7, u:-2.92e-03, v:-8.43e-03, p: 1.72e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  7, umax: 7.85e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  3.99e-03              final residual: 3.99e-03                    delta_phi: 3.77e-02
+time u: 7.15e-03
+residual history in solve_2d: initial residual:  8.78e-04              final residual: 8.78e-04                    delta_phi: 2.70e-02
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.37e-03              final residual: 1.37e-03                    delta_phi: 4.18e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:8, max residul:2.00e-03, u:2.00e-03, v:4.39e-04, pp:1.08e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   8, u:-3.12e-03, v:-9.03e-03, p: 1.26e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  8, umax: 8.01e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  3.49e-03              final residual: 3.49e-03                    delta_phi: 2.65e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  9.42e-04              final residual: 9.42e-04                    delta_phi: 3.00e-02
+time v: 6.88e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 2.95e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.58e-03
+
+--iter:9, max residul:1.74e-03, u:1.74e-03, v:4.71e-04, pp:2.87e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:   9, u:-3.29e-03, v:-9.54e-03, p: 1.15e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter:  9, umax: 8.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  3.09e-03              final residual: 3.09e-03                    delta_phi: 2.33e-02
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  1.01e-03              final residual: 1.01e-03                    delta_phi: 3.05e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.96e-04              final residual: 9.96e-04                    delta_phi: 1.51e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:10, max residul:1.55e-03, u:1.55e-03, v:5.04e-04, pp:1.36e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  10, u:-3.45e-03, v:-1.00e-02, p: 1.21e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 10, umax: 8.25e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  2.81e-03              final residual: 2.81e-03                    delta_phi: 2.65e-02
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  9.73e-04              final residual: 9.73e-04                    delta_phi: 2.77e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.32e-04              final residual: 9.32e-04                    delta_phi: 1.81e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.67e-03
+
+--iter:11, max residul:1.40e-03, u:1.40e-03, v:4.87e-04, pp:5.15e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  11, u:-3.62e-03, v:-1.06e-02, p: 1.20e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 11, umax: 8.34e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  2.57e-03              final residual: 2.57e-03                    delta_phi: 2.62e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  9.41e-04              final residual: 9.41e-04                    delta_phi: 2.60e-02
+time v: 6.87e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.44e-04              final residual: 8.44e-04                    delta_phi: 2.33e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.69e-03
+
+--iter:12, max residul:1.29e-03, u:1.29e-03, v:4.70e-04, pp:1.46e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  12, u:-3.78e-03, v:-1.10e-02, p: 1.06e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 12, umax: 8.42e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  2.35e-03              final residual: 2.35e-03                    delta_phi: 2.17e-02
+time u: 7.13e-03
+residual history in solve_2d: initial residual:  9.67e-04              final residual: 9.67e-04                    delta_phi: 2.59e-02
+time v: 6.94e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.33e-04              final residual: 7.33e-04                    delta_phi: 2.06e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:13, max residul:1.17e-03, u:1.17e-03, v:4.83e-04, pp:1.36e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  13, u:-3.92e-03, v:-1.15e-02, p: 9.13e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 13, umax: 8.49e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  2.16e-03              final residual: 2.16e-03                    delta_phi: 1.86e-02
+time u: 7.24e-03
+residual history in solve_2d: initial residual:  1.00e-03              final residual: 1.00e-03                    delta_phi: 2.57e-02
+time v: 7.02e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.30e-04              final residual: 6.30e-04                    delta_phi: 1.42e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:14, max residul:1.08e-03, u:1.08e-03, v:5.01e-04, pp:1.11e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  14, u:-4.05e-03, v:-1.19e-02, p: 8.27e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 14, umax: 8.55e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.21e-02
+residual history in solve_2d: initial residual:  2.01e-03              final residual: 2.01e-03                    delta_phi: 1.94e-02
+time u: 7.20e-03
+residual history in solve_2d: initial residual:  1.01e-03              final residual: 1.01e-03                    delta_phi: 2.49e-02
+time v: 6.89e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.54e-04              final residual: 5.54e-04                    delta_phi: 1.20e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.69e-03
+
+--iter:15, max residul:1.01e-03, u:1.01e-03, v:5.03e-04, pp:1.08e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  15, u:-4.17e-03, v:-1.22e-02, p: 7.83e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 15, umax: 8.60e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.20e-02
+residual history in solve_2d: initial residual:  1.89e-03              final residual: 1.89e-03                    delta_phi: 2.06e-02
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  9.95e-04              final residual: 9.95e-04                    delta_phi: 2.39e-02
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.05e-04              final residual: 5.05e-04                    delta_phi: 1.36e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.68e-03
+
+--iter:16, max residul:9.45e-04, u:9.45e-04, v:4.97e-04, pp:3.17e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  16, u:-4.29e-03, v:-1.26e-02, p: 7.26e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 16, umax: 8.65e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.77e-03              final residual: 1.77e-03                    delta_phi: 1.88e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  1.01e-03              final residual: 1.01e-03                    delta_phi: 2.36e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.60e-04              final residual: 4.60e-04                    delta_phi: 1.38e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.57e-03
+
+--iter:17, max residul:8.85e-04, u:8.85e-04, v:5.03e-04, pp:2.22e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  17, u:-4.40e-03, v:-1.29e-02, p: 6.43e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 17, umax: 8.69e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.65e-03              final residual: 1.65e-03                    delta_phi: 1.68e-02
+time u: 7.17e-03
+residual history in solve_2d: initial residual:  1.03e-03              final residual: 1.03e-03                    delta_phi: 2.38e-02
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.09e-04              final residual: 4.09e-04                    delta_phi: 1.12e-02
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:18, max residul:8.27e-04, u:8.27e-04, v:5.15e-04, pp:9.76e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  18, u:-4.51e-03, v:-1.32e-02, p: 5.61e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 18, umax: 8.73e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  1.56e-03              final residual: 1.56e-03                    delta_phi: 1.66e-02
+time u: 7.06e-03
+residual history in solve_2d: initial residual:  1.04e-03              final residual: 1.04e-03                    delta_phi: 2.34e-02
+time v: 6.74e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.62e-04              final residual: 3.62e-04                    delta_phi: 8.85e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:19, max residul:7.81e-04, u:7.81e-04, v:5.22e-04, pp:4.34e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  19, u:-4.60e-03, v:-1.35e-02, p: 4.97e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 19, umax: 8.77e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.49e-03              final residual: 1.49e-03                    delta_phi: 1.67e-02
+time u: 7.04e-03
+residual history in solve_2d: initial residual:  1.05e-03              final residual: 1.05e-03                    delta_phi: 2.26e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.35e-04              final residual: 3.35e-04                    delta_phi: 8.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.67e-03
+
+--iter:20, max residul:7.45e-04, u:7.45e-04, v:5.23e-04, pp:2.06e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  20, u:-4.70e-03, v:-1.37e-02, p: 4.44e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 20, umax: 8.80e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.42e-03              final residual: 1.42e-03                    delta_phi: 1.67e-02
+time u: 7.09e-03
+residual history in solve_2d: initial residual:  1.05e-03              final residual: 1.05e-03                    delta_phi: 2.23e-02
+time v: 6.73e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.17e-04              final residual: 3.17e-04                    delta_phi: 8.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:21, max residul:7.09e-04, u:7.09e-04, v:5.25e-04, pp:5.96e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  21, u:-4.79e-03, v:-1.40e-02, p: 3.86e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 21, umax: 8.83e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.35e-03              final residual: 1.35e-03                    delta_phi: 1.57e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.07e-03              final residual: 1.07e-03                    delta_phi: 2.20e-02
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.00e-04              final residual: 3.00e-04                    delta_phi: 8.25e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.67e-03
+
+--iter:22, max residul:6.74e-04, u:6.74e-04, v:5.33e-04, pp:2.17e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  22, u:-4.87e-03, v:-1.42e-02, p: 3.24e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 22, umax: 8.86e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.28e-03              final residual: 1.28e-03                    delta_phi: 1.56e-02
+time u: 6.96e-03
+residual history in solve_2d: initial residual:  1.08e-03              final residual: 1.08e-03                    delta_phi: 2.16e-02
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.81e-04              final residual: 2.81e-04                    delta_phi: 7.11e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.66e-03
+
+--iter:23, max residul:6.42e-04, u:6.42e-04, v:5.40e-04, pp:1.57e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  23, u:-4.96e-03, v:-1.44e-02, p: 2.68e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 23, umax: 8.89e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.23e-03              final residual: 1.23e-03                    delta_phi: 1.54e-02
+time u: 7.11e-03
+residual history in solve_2d: initial residual:  1.09e-03              final residual: 1.09e-03                    delta_phi: 2.11e-02
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.66e-04              final residual: 2.66e-04                    delta_phi: 6.37e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:24, max residul:6.16e-04, u:6.16e-04, v:5.43e-04, pp:7.59e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  24, u:-5.04e-03, v:-1.46e-02, p: 2.23e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 24, umax: 8.91e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.19e-03              final residual: 1.19e-03                    delta_phi: 1.57e-02
+time u: 7.12e-03
+residual history in solve_2d: initial residual:  1.09e-03              final residual: 1.09e-03                    delta_phi: 2.07e-02
+time v: 6.85e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.60e-04              final residual: 2.60e-04                    delta_phi: 6.21e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:25, max residul:5.94e-04, u:5.94e-04, v:5.46e-04, pp:1.95e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  25, u:-5.12e-03, v:-1.47e-02, p: 1.81e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 25, umax: 8.94e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  1.15e-03              final residual: 1.15e-03                    delta_phi: 1.54e-02
+time u: 7.23e-03
+residual history in solve_2d: initial residual:  1.10e-03              final residual: 1.10e-03                    delta_phi: 2.02e-02
+time v: 6.88e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.60e-04              final residual: 2.60e-04                    delta_phi: 6.10e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.63e-03
+
+--iter:26, max residul:5.73e-04, u:5.73e-04, v:5.49e-04, pp:6.07e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  26, u:-5.20e-03, v:-1.49e-02, p: 1.39e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 26, umax: 8.96e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.20e-02
+residual history in solve_2d: initial residual:  1.10e-03              final residual: 1.10e-03                    delta_phi: 1.53e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  1.11e-03              final residual: 1.11e-03                    delta_phi: 1.98e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.58e-04              final residual: 2.58e-04                    delta_phi: 5.69e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.70e-03
+
+--iter:27, max residul:5.54e-04, u:5.52e-04, v:5.54e-04, pp:2.98e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  27, u:-5.29e-03, v:-1.50e-02, p: 1.01e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 27, umax: 8.99e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  1.07e-03              final residual: 1.07e-03                    delta_phi: 1.53e-02
+time u: 6.96e-03
+residual history in solve_2d: initial residual:  1.11e-03              final residual: 1.11e-03                    delta_phi: 1.97e-02
+time v: 6.68e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.54e-04              final residual: 2.54e-04                    delta_phi: 5.19e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:28, max residul:5.57e-04, u:5.34e-04, v:5.57e-04, pp:5.96e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  28, u:-5.37e-03, v:-1.52e-02, p: 7.06e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 28, umax: 9.01e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  1.04e-03              final residual: 1.04e-03                    delta_phi: 1.52e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.94e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.54e-04              final residual: 2.54e-04                    delta_phi: 4.89e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.68e-03
+
+--iter:29, max residul:5.59e-04, u:5.20e-04, v:5.59e-04, pp:3.25e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  29, u:-5.46e-03, v:-1.53e-02, p: 4.63e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 29, umax: 9.03e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  1.01e-03              final residual: 1.01e-03                    delta_phi: 1.57e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.90e-02
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.60e-04              final residual: 2.60e-04                    delta_phi: 4.75e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.63e-03
+
+--iter:30, max residul:5.61e-04, u:5.07e-04, v:5.61e-04, pp:3.58e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  30, u:-5.55e-03, v:-1.55e-02, p: 2.46e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 30, umax: 9.05e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  9.89e-04              final residual: 9.89e-04                    delta_phi: 1.55e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.86e-02
+time v: 6.89e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.66e-04              final residual: 2.66e-04                    delta_phi: 4.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:31, max residul:5.62e-04, u:4.95e-04, v:5.62e-04, pp:2.55e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  31, u:-5.65e-03, v:-1.56e-02, p: 6.20e-06, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 31, umax: 9.07e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  9.68e-04              final residual: 9.68e-04                    delta_phi: 1.53e-02
+time u: 7.06e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.84e-02
+time v: 6.88e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.69e-04              final residual: 2.69e-04                    delta_phi: 4.28e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.66e-03
+
+--iter:32, max residul:5.64e-04, u:4.84e-04, v:5.64e-04, pp:7.07e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  32, u:-5.75e-03, v:-1.58e-02, p:-7.02e-06, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 32, umax: 9.08e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  9.50e-04              final residual: 9.50e-04                    delta_phi: 1.60e-02
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.80e-02
+time v: 6.80e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.74e-04              final residual: 2.74e-04                    delta_phi: 3.99e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:33, max residul:5.65e-04, u:4.75e-04, v:5.65e-04, pp:1.25e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  33, u:-5.85e-03, v:-1.59e-02, p:-1.39e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 33, umax: 9.10e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.35e-04              final residual: 9.35e-04                    delta_phi: 1.57e-02
+time u: 6.98e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.75e-02
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.83e-04              final residual: 2.83e-04                    delta_phi: 3.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.59e-03
+
+--iter:34, max residul:5.65e-04, u:4.68e-04, v:5.65e-04, pp:1.14e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  34, u:-5.96e-03, v:-1.61e-02, p:-1.70e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 34, umax: 9.11e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.23e-04              final residual: 9.23e-04                    delta_phi: 1.56e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.72e-02
+time v: 6.78e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.93e-04              final residual: 2.93e-04                    delta_phi: 3.62e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:35, max residul:5.65e-04, u:4.61e-04, v:5.65e-04, pp:3.79e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  35, u:-6.08e-03, v:-1.63e-02, p:-1.82e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 35, umax: 9.13e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  9.12e-04              final residual: 9.12e-04                    delta_phi: 1.64e-02
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.70e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.02e-04              final residual: 3.02e-04                    delta_phi: 3.42e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:36, max residul:5.65e-04, u:4.56e-04, v:5.65e-04, pp:5.85e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  36, u:-6.21e-03, v:-1.65e-02, p:-1.65e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 36, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  9.04e-04              final residual: 9.04e-04                    delta_phi: 1.59e-02
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.67e-02
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.09e-04              final residual: 3.09e-04                    delta_phi: 3.21e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:37, max residul:5.65e-04, u:4.52e-04, v:5.65e-04, pp:9.76e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  37, u:-6.33e-03, v:-1.67e-02, p:-9.84e-06, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 37, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  8.98e-04              final residual: 8.98e-04                    delta_phi: 1.57e-02
+time u: 7.12e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.63e-02
+time v: 6.80e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.19e-04              final residual: 3.19e-04                    delta_phi: 3.02e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:38, max residul:5.64e-04, u:4.49e-04, v:5.64e-04, pp:9.76e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  38, u:-6.47e-03, v:-1.69e-02, p:-6.45e-07, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 38, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  8.94e-04              final residual: 8.94e-04                    delta_phi: 1.69e-02
+time u: 7.04e-03
+residual history in solve_2d: initial residual:  1.13e-03              final residual: 1.13e-03                    delta_phi: 1.61e-02
+time v: 6.86e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.33e-04              final residual: 3.33e-04                    delta_phi: 2.84e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.75e-03
+
+--iter:39, max residul:5.63e-04, u:4.47e-04, v:5.63e-04, pp:2.03e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  39, u:-6.62e-03, v:-1.72e-02, p: 9.61e-06, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 39, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  8.91e-04              final residual: 8.91e-04                    delta_phi: 1.64e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.59e-02
+time v: 6.80e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.42e-04              final residual: 3.42e-04                    delta_phi: 2.67e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:40, max residul:5.62e-04, u:4.45e-04, v:5.62e-04, pp:5.91e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  40, u:-6.77e-03, v:-1.75e-02, p: 2.19e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 40, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  8.90e-04              final residual: 8.90e-04                    delta_phi: 1.56e-02
+time u: 7.09e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.57e-02
+time v: 6.90e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.47e-04              final residual: 3.47e-04                    delta_phi: 2.54e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.69e-03
+
+--iter:41, max residul:5.61e-04, u:4.45e-04, v:5.61e-04, pp:3.04e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  41, u:-6.93e-03, v:-1.78e-02, p: 3.67e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 41, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  8.90e-04              final residual: 8.90e-04                    delta_phi: 1.65e-02
+time u: 7.06e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.53e-02
+time v: 6.67e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.59e-04              final residual: 3.59e-04                    delta_phi: 2.56e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:42, max residul:5.59e-04, u:4.45e-04, v:5.59e-04, pp:5.91e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  42, u:-7.11e-03, v:-1.81e-02, p: 5.00e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 42, umax: 9.19e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  8.91e-04              final residual: 8.91e-04                    delta_phi: 1.67e-02
+time u: 7.09e-03
+residual history in solve_2d: initial residual:  1.12e-03              final residual: 1.12e-03                    delta_phi: 1.50e-02
+time v: 6.80e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.72e-04              final residual: 3.72e-04                    delta_phi: 2.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.69e-03
+
+--iter:43, max residul:5.58e-04, u:4.46e-04, v:5.58e-04, pp:6.02e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  43, u:-7.30e-03, v:-1.85e-02, p: 6.16e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 43, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  8.94e-04              final residual: 8.94e-04                    delta_phi: 1.61e-02
+time u: 6.90e-03
+residual history in solve_2d: initial residual:  1.11e-03              final residual: 1.11e-03                    delta_phi: 1.49e-02
+time v: 6.69e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.75e-04              final residual: 3.75e-04                    delta_phi: 2.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:44, max residul:5.56e-04, u:4.47e-04, v:5.56e-04, pp:3.20e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  44, u:-7.50e-03, v:-1.89e-02, p: 7.32e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 44, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  8.97e-04              final residual: 8.97e-04                    delta_phi: 1.56e-02
+time u: 7.04e-03
+residual history in solve_2d: initial residual:  1.11e-03              final residual: 1.11e-03                    delta_phi: 1.46e-02
+time v: 6.71e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.75e-04              final residual: 3.75e-04                    delta_phi: 2.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.66e-03
+
+--iter:45, max residul:5.55e-04, u:4.49e-04, v:5.55e-04, pp:4.39e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  45, u:-7.72e-03, v:-1.93e-02, p: 8.88e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 45, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  9.01e-04              final residual: 9.01e-04                    delta_phi: 1.66e-02
+time u: 6.88e-03
+residual history in solve_2d: initial residual:  1.11e-03              final residual: 1.11e-03                    delta_phi: 1.43e-02
+time v: 6.69e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.91e-04              final residual: 3.91e-04                    delta_phi: 2.53e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:46, max residul:5.53e-04, u:4.51e-04, v:5.53e-04, pp:7.59e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  46, u:-7.96e-03, v:-1.98e-02, p: 1.03e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 46, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.06e-04              final residual: 9.06e-04                    delta_phi: 1.64e-02
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  1.10e-03              final residual: 1.10e-03                    delta_phi: 1.40e-02
+time v: 6.74e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.07e-04              final residual: 4.07e-04                    delta_phi: 2.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.58e-03
+
+--iter:47, max residul:5.51e-04, u:4.53e-04, v:5.51e-04, pp:3.96e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  47, u:-8.24e-03, v:-2.03e-02, p: 1.11e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 47, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.11e-04              final residual: 9.11e-04                    delta_phi: 1.51e-02
+time u: 6.90e-03
+residual history in solve_2d: initial residual:  1.10e-03              final residual: 1.10e-03                    delta_phi: 1.38e-02
+time v: 6.65e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.03e-04              final residual: 4.03e-04                    delta_phi: 2.53e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.63e-03
+
+--iter:48, max residul:5.49e-04, u:4.55e-04, v:5.49e-04, pp:4.39e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  48, u:-8.55e-03, v:-2.09e-02, p: 1.14e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 48, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.16e-04              final residual: 9.16e-04                    delta_phi: 1.60e-02
+time u: 6.94e-03
+residual history in solve_2d: initial residual:  1.09e-03              final residual: 1.09e-03                    delta_phi: 1.37e-02
+time v: 6.74e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.99e-04              final residual: 3.99e-04                    delta_phi: 2.46e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.42e-03
+
+--iter:49, max residul:5.47e-04, u:4.58e-04, v:5.47e-04, pp:1.31e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  49, u:-8.92e-03, v:-2.16e-02, p: 1.21e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 49, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.22e-04              final residual: 9.22e-04                    delta_phi: 1.67e-02
+time u: 7.06e-03
+residual history in solve_2d: initial residual:  1.09e-03              final residual: 1.09e-03                    delta_phi: 1.35e-02
+time v: 6.83e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.19e-04              final residual: 4.19e-04                    delta_phi: 2.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:50, max residul:5.44e-04, u:4.61e-04, v:5.44e-04, pp:4.61e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  50, u:-9.34e-03, v:-2.23e-02, p: 1.33e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 50, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.28e-04              final residual: 9.28e-04                    delta_phi: 1.59e-02
+time u: 7.03e-03
+residual history in solve_2d: initial residual:  1.09e-03              final residual: 1.09e-03                    delta_phi: 1.33e-02
+time v: 6.73e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.40e-04              final residual: 4.40e-04                    delta_phi: 2.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.43e-03
+
+--iter:51, max residul:5.43e-04, u:4.64e-04, v:5.43e-04, pp:1.08e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  51, u:-9.84e-03, v:-2.31e-02, p: 1.31e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 51, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.33e-04              final residual: 9.33e-04                    delta_phi: 1.47e-02
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  1.08e-03              final residual: 1.08e-03                    delta_phi: 1.30e-02
+time v: 6.69e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.29e-04              final residual: 4.29e-04                    delta_phi: 2.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:52, max residul:5.41e-04, u:4.66e-04, v:5.41e-04, pp:3.69e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  52, u:-1.04e-02, v:-2.41e-02, p: 1.14e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 52, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.39e-04              final residual: 9.39e-04                    delta_phi: 1.53e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.08e-03              final residual: 1.08e-03                    delta_phi: 1.29e-02
+time v: 6.68e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.15e-04              final residual: 4.15e-04                    delta_phi: 2.40e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:53, max residul:5.38e-04, u:4.69e-04, v:5.38e-04, pp:2.06e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  53, u:-1.11e-02, v:-2.52e-02, p: 1.01e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 53, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.45e-04              final residual: 9.45e-04                    delta_phi: 1.60e-02
+time u: 7.17e-03
+residual history in solve_2d: initial residual:  1.07e-03              final residual: 1.07e-03                    delta_phi: 1.28e-02
+time v: 6.97e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.30e-04              final residual: 4.30e-04                    delta_phi: 2.33e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:54, max residul:5.36e-04, u:4.73e-04, v:5.36e-04, pp:4.34e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  54, u:-1.19e-02, v:-2.64e-02, p: 9.61e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 54, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.19e-02
+residual history in solve_2d: initial residual:  9.50e-04              final residual: 9.50e-04                    delta_phi: 1.58e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.07e-03              final residual: 1.07e-03                    delta_phi: 1.26e-02
+time v: 6.72e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.62e-04              final residual: 4.62e-04                    delta_phi: 2.38e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.45e-03
+
+--iter:55, max residul:5.34e-04, u:4.75e-04, v:5.34e-04, pp:7.59e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  55, u:-1.28e-02, v:-2.79e-02, p: 7.63e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 55, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.54e-04              final residual: 9.54e-04                    delta_phi: 1.42e-02
+time u: 7.00e-03
+residual history in solve_2d: initial residual:  1.06e-03              final residual: 1.06e-03                    delta_phi: 1.24e-02
+time v: 6.77e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.58e-04              final residual: 4.58e-04                    delta_phi: 2.43e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:56, max residul:5.32e-04, u:4.77e-04, v:5.32e-04, pp:6.18e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  56, u:-1.39e-02, v:-2.95e-02, p: 3.15e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 56, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.59e-04              final residual: 9.59e-04                    delta_phi: 1.42e-02
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  1.06e-03              final residual: 1.06e-03                    delta_phi: 1.21e-02
+time v: 6.69e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.31e-04              final residual: 4.31e-04                    delta_phi: 2.35e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:57, max residul:5.30e-04, u:4.79e-04, v:5.30e-04, pp:3.36e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  57, u:-1.52e-02, v:-3.14e-02, p:-1.79e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 57, umax: 9.21e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.65e-04              final residual: 9.65e-04                    delta_phi: 1.48e-02
+time u: 6.99e-03
+residual history in solve_2d: initial residual:  1.05e-03              final residual: 1.05e-03                    delta_phi: 1.20e-02
+time v: 6.71e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.30e-04              final residual: 4.30e-04                    delta_phi: 2.24e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:58, max residul:5.27e-04, u:4.82e-04, v:5.27e-04, pp:5.31e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  58, u:-1.66e-02, v:-3.36e-02, p:-5.18e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 58, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.70e-04              final residual: 9.70e-04                    delta_phi: 1.51e-02
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  1.05e-03              final residual: 1.05e-03                    delta_phi: 1.19e-02
+time v: 6.72e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.60e-04              final residual: 4.60e-04                    delta_phi: 2.24e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:59, max residul:5.24e-04, u:4.85e-04, v:5.24e-04, pp:4.45e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  59, u:-1.83e-02, v:-3.60e-02, p:-8.73e-05, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 59, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.72e-04              final residual: 9.72e-04                    delta_phi: 1.39e-02
+time u: 6.98e-03
+residual history in solve_2d: initial residual:  1.05e-03              final residual: 1.05e-03                    delta_phi: 1.18e-02
+time v: 6.78e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.77e-04              final residual: 4.77e-04                    delta_phi: 2.33e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:60, max residul:5.23e-04, u:4.86e-04, v:5.23e-04, pp:7.91e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  60, u:-2.01e-02, v:-3.87e-02, p:-1.61e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 60, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.74e-04              final residual: 9.74e-04                    delta_phi: 1.40e-02
+time u: 7.07e-03
+residual history in solve_2d: initial residual:  1.04e-03              final residual: 1.04e-03                    delta_phi: 1.16e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.53e-04              final residual: 4.53e-04                    delta_phi: 2.32e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:61, max residul:5.21e-04, u:4.87e-04, v:5.21e-04, pp:2.39e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  61, u:-2.21e-02, v:-4.18e-02, p:-2.56e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 61, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.78e-04              final residual: 9.78e-04                    delta_phi: 1.37e-02
+time u: 7.09e-03
+residual history in solve_2d: initial residual:  1.03e-03              final residual: 1.03e-03                    delta_phi: 1.13e-02
+time v: 6.76e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.30e-04              final residual: 4.30e-04                    delta_phi: 2.19e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:62, max residul:5.17e-04, u:4.89e-04, v:5.17e-04, pp:3.36e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  62, u:-2.44e-02, v:-4.51e-02, p:-3.31e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 62, umax: 9.20e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.82e-04              final residual: 9.82e-04                    delta_phi: 1.39e-02
+time u: 6.87e-03
+residual history in solve_2d: initial residual:  1.03e-03              final residual: 1.03e-03                    delta_phi: 1.11e-02
+time v: 6.56e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.43e-04              final residual: 4.43e-04                    delta_phi: 2.12e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.46e-03
+
+--iter:63, max residul:5.14e-04, u:4.91e-04, v:5.14e-04, pp:4.88e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  63, u:-2.68e-02, v:-4.88e-02, p:-3.91e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 63, umax: 9.19e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  9.84e-04              final residual: 9.84e-04                    delta_phi: 1.38e-02
+time u: 7.12e-03
+residual history in solve_2d: initial residual:  1.02e-03              final residual: 1.02e-03                    delta_phi: 1.10e-02
+time v: 6.64e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.69e-04              final residual: 4.69e-04                    delta_phi: 2.16e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:64, max residul:5.11e-04, u:4.92e-04, v:5.11e-04, pp:5.96e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  64, u:-2.95e-02, v:-5.27e-02, p:-4.71e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 64, umax: 9.19e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.84e-04              final residual: 9.84e-04                    delta_phi: 1.30e-02
+time u: 7.49e-03
+residual history in solve_2d: initial residual:  1.02e-03              final residual: 1.02e-03                    delta_phi: 1.10e-02
+time v: 7.64e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.72e-04              final residual: 4.72e-04                    delta_phi: 2.22e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.81e-03
+
+--iter:65, max residul:5.09e-04, u:4.92e-04, v:5.09e-04, pp:4.34e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  65, u:-3.23e-02, v:-5.70e-02, p:-5.93e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 65, umax: 9.19e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.32e-02
+residual history in solve_2d: initial residual:  9.85e-04              final residual: 9.85e-04                    delta_phi: 1.28e-02
+time u: 7.21e-03
+residual history in solve_2d: initial residual:  1.01e-03              final residual: 1.01e-03                    delta_phi: 1.09e-02
+time v: 6.96e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.47e-04              final residual: 4.47e-04                    delta_phi: 2.17e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.72e-03
+
+--iter:66, max residul:5.06e-04, u:4.92e-04, v:5.06e-04, pp:3.58e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  66, u:-3.54e-02, v:-6.16e-02, p:-7.27e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 66, umax: 9.19e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.21e-02
+residual history in solve_2d: initial residual:  9.87e-04              final residual: 9.87e-04                    delta_phi: 1.28e-02
+time u: 7.13e-03
+residual history in solve_2d: initial residual:  1.01e-03              final residual: 1.01e-03                    delta_phi: 1.07e-02
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.31e-04              final residual: 4.31e-04                    delta_phi: 2.04e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:67, max residul:5.03e-04, u:4.93e-04, v:5.03e-04, pp:1.84e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  67, u:-3.87e-02, v:-6.65e-02, p:-8.32e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 67, umax: 9.19e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  9.89e-04              final residual: 9.89e-04                    delta_phi: 1.28e-02
+time u: 7.15e-03
+residual history in solve_2d: initial residual:  9.97e-04              final residual: 9.97e-04                    delta_phi: 1.05e-02
+time v: 6.89e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.42e-04              final residual: 4.42e-04                    delta_phi: 2.02e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.70e-03
+
+--iter:68, max residul:4.99e-04, u:4.94e-04, v:4.99e-04, pp:3.25e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  68, u:-4.21e-02, v:-7.17e-02, p:-9.20e-04, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 68, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.20e-02
+residual history in solve_2d: initial residual:  9.88e-04              final residual: 9.88e-04                    delta_phi: 1.25e-02
+time u: 7.22e-03
+residual history in solve_2d: initial residual:  9.91e-04              final residual: 9.91e-04                    delta_phi: 1.02e-02
+time v: 6.90e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.55e-04              final residual: 4.55e-04                    delta_phi: 2.06e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.69e-03
+
+--iter:69, max residul:4.95e-04, u:4.94e-04, v:4.95e-04, pp:2.17e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  69, u:-4.57e-02, v:-7.72e-02, p:-1.03e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 69, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.20e-02
+residual history in solve_2d: initial residual:  9.86e-04              final residual: 9.86e-04                    delta_phi: 1.19e-02
+time u: 7.10e-03
+residual history in solve_2d: initial residual:  9.85e-04              final residual: 9.85e-04                    delta_phi: 1.02e-02
+time v: 6.84e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.51e-04              final residual: 4.51e-04                    delta_phi: 2.07e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:70, max residul:4.93e-04, u:4.93e-04, v:4.93e-04, pp:2.06e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  70, u:-4.94e-02, v:-8.30e-02, p:-1.19e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 70, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.17e-02
+residual history in solve_2d: initial residual:  9.85e-04              final residual: 9.85e-04                    delta_phi: 1.16e-02
+time u: 7.06e-03
+residual history in solve_2d: initial residual:  9.79e-04              final residual: 9.79e-04                    delta_phi: 1.02e-02
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.36e-04              final residual: 4.36e-04                    delta_phi: 2.02e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:71, max residul:4.93e-04, u:4.93e-04, v:4.89e-04, pp:8.02e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  71, u:-5.33e-02, v:-8.90e-02, p:-1.34e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 71, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.84e-04              final residual: 9.84e-04                    delta_phi: 1.15e-02
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  9.70e-04              final residual: 9.70e-04                    delta_phi: 1.01e-02
+time v: 6.78e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.25e-04              final residual: 4.25e-04                    delta_phi: 1.93e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:72, max residul:4.92e-04, u:4.92e-04, v:4.85e-04, pp:2.28e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  72, u:-5.73e-02, v:-9.53e-02, p:-1.48e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 72, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.83e-04              final residual: 9.83e-04                    delta_phi: 1.13e-02
+time u: 6.81e-03
+residual history in solve_2d: initial residual:  9.62e-04              final residual: 9.62e-04                    delta_phi: 9.91e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.30e-04              final residual: 4.30e-04                    delta_phi: 1.90e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.47e-03
+
+--iter:73, max residul:4.92e-04, u:4.92e-04, v:4.81e-04, pp:1.62e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  73, u:-6.13e-02, v:-1.02e-01, p:-1.60e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 73, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  9.81e-04              final residual: 9.81e-04                    delta_phi: 1.12e-02
+time u: 6.88e-03
+residual history in solve_2d: initial residual:  9.54e-04              final residual: 9.54e-04                    delta_phi: 9.73e-03
+time v: 6.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.39e-04              final residual: 4.39e-04                    delta_phi: 1.92e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:74, max residul:4.90e-04, u:4.90e-04, v:4.77e-04, pp:1.30e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  74, u:-6.55e-02, v:-1.09e-01, p:-1.74e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 74, umax: 9.18e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.77e-04              final residual: 9.77e-04                    delta_phi: 1.07e-02
+time u: 6.98e-03
+residual history in solve_2d: initial residual:  9.47e-04              final residual: 9.47e-04                    delta_phi: 9.52e-03
+time v: 6.71e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.35e-04              final residual: 4.35e-04                    delta_phi: 1.92e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:75, max residul:4.89e-04, u:4.89e-04, v:4.74e-04, pp:1.73e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  75, u:-6.96e-02, v:-1.15e-01, p:-1.89e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 75, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.74e-04              final residual: 9.74e-04                    delta_phi: 1.04e-02
+time u: 6.86e-03
+residual history in solve_2d: initial residual:  9.40e-04              final residual: 9.40e-04                    delta_phi: 9.29e-03
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.23e-04              final residual: 4.23e-04                    delta_phi: 1.88e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:76, max residul:4.87e-04, u:4.87e-04, v:4.70e-04, pp:4.34e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  76, u:-7.37e-02, v:-1.23e-01, p:-2.06e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 76, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.71e-04              final residual: 9.71e-04                    delta_phi: 1.02e-02
+time u: 6.95e-03
+residual history in solve_2d: initial residual:  9.31e-04              final residual: 9.31e-04                    delta_phi: 9.21e-03
+time v: 6.63e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.14e-04              final residual: 4.14e-04                    delta_phi: 1.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:77, max residul:4.86e-04, u:4.86e-04, v:4.66e-04, pp:8.46e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  77, u:-7.78e-02, v:-1.30e-01, p:-2.23e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 77, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.68e-04              final residual: 9.68e-04                    delta_phi: 9.90e-03
+time u: 6.96e-03
+residual history in solve_2d: initial residual:  9.22e-04              final residual: 9.22e-04                    delta_phi: 9.12e-03
+time v: 6.70e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.05e-04              final residual: 4.05e-04                    delta_phi: 1.78e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:78, max residul:4.84e-04, u:4.84e-04, v:4.61e-04, pp:1.21e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  78, u:-8.20e-02, v:-1.37e-01, p:-2.40e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 78, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.63e-04              final residual: 9.63e-04                    delta_phi: 9.86e-03
+time u: 6.91e-03
+residual history in solve_2d: initial residual:  9.13e-04              final residual: 9.13e-04                    delta_phi: 9.10e-03
+time v: 6.77e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.02e-04              final residual: 4.02e-04                    delta_phi: 1.77e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:79, max residul:4.82e-04, u:4.82e-04, v:4.57e-04, pp:2.17e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  79, u:-8.62e-02, v:-1.45e-01, p:-2.57e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 79, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  9.58e-04              final residual: 9.58e-04                    delta_phi: 9.82e-03
+time u: 6.92e-03
+residual history in solve_2d: initial residual:  9.05e-04              final residual: 9.05e-04                    delta_phi: 8.98e-03
+time v: 6.69e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.04e-04              final residual: 4.04e-04                    delta_phi: 1.75e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:80, max residul:4.79e-04, u:4.79e-04, v:4.52e-04, pp:4.12e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  80, u:-9.03e-02, v:-1.52e-01, p:-2.74e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 80, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.53e-04              final residual: 9.53e-04                    delta_phi: 9.59e-03
+time u: 6.88e-03
+residual history in solve_2d: initial residual:  8.97e-04              final residual: 8.97e-04                    delta_phi: 8.82e-03
+time v: 6.62e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.07e-04              final residual: 4.07e-04                    delta_phi: 1.73e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.58e-03
+
+--iter:81, max residul:4.76e-04, u:4.76e-04, v:4.48e-04, pp:4.34e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  81, u:-9.43e-02, v:-1.60e-01, p:-2.92e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 81, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.47e-04              final residual: 9.47e-04                    delta_phi: 9.15e-03
+time u: 6.89e-03
+residual history in solve_2d: initial residual:  8.88e-04              final residual: 8.88e-04                    delta_phi: 8.63e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.04e-04              final residual: 4.04e-04                    delta_phi: 1.70e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:82, max residul:4.74e-04, u:4.74e-04, v:4.44e-04, pp:1.95e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  82, u:-9.82e-02, v:-1.67e-01, p:-3.10e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 82, umax: 9.17e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  9.41e-04              final residual: 9.41e-04                    delta_phi: 8.83e-03
+time u: 6.95e-03
+residual history in solve_2d: initial residual:  8.80e-04              final residual: 8.80e-04                    delta_phi: 8.47e-03
+time v: 6.64e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.92e-04              final residual: 3.92e-04                    delta_phi: 1.66e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:83, max residul:4.71e-04, u:4.71e-04, v:4.40e-04, pp:4.12e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  83, u:-1.02e-01, v:-1.75e-01, p:-3.30e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 83, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  9.36e-04              final residual: 9.36e-04                    delta_phi: 8.78e-03
+time u: 7.15e-03
+residual history in solve_2d: initial residual:  8.71e-04              final residual: 8.71e-04                    delta_phi: 8.33e-03
+time v: 6.81e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.81e-04              final residual: 3.81e-04                    delta_phi: 1.63e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.59e-03
+
+--iter:84, max residul:4.68e-04, u:4.68e-04, v:4.36e-04, pp:6.29e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  84, u:-1.06e-01, v:-1.83e-01, p:-3.52e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 84, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  9.30e-04              final residual: 9.30e-04                    delta_phi: 8.62e-03
+time u: 7.05e-03
+residual history in solve_2d: initial residual:  8.62e-04              final residual: 8.62e-04                    delta_phi: 8.23e-03
+time v: 6.77e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.72e-04              final residual: 3.72e-04                    delta_phi: 1.61e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.42e-03
+
+--iter:85, max residul:4.65e-04, u:4.65e-04, v:4.31e-04, pp:4.55e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  85, u:-1.09e-01, v:-1.90e-01, p:-3.75e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 85, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.23e-04              final residual: 9.23e-04                    delta_phi: 8.51e-03
+time u: 6.93e-03
+residual history in solve_2d: initial residual:  8.52e-04              final residual: 8.52e-04                    delta_phi: 8.16e-03
+time v: 6.73e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.68e-04              final residual: 3.68e-04                    delta_phi: 1.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:86, max residul:4.62e-04, u:4.62e-04, v:4.26e-04, pp:2.82e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  86, u:-1.12e-01, v:-1.97e-01, p:-3.97e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 86, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.16e-04              final residual: 9.16e-04                    delta_phi: 8.26e-03
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  8.43e-04              final residual: 8.43e-04                    delta_phi: 8.11e-03
+time v: 6.70e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.66e-04              final residual: 3.66e-04                    delta_phi: 1.56e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.63e-03
+
+--iter:87, max residul:4.58e-04, u:4.58e-04, v:4.22e-04, pp:2.17e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  87, u:-1.15e-01, v:-2.04e-01, p:-4.19e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 87, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  9.08e-04              final residual: 9.08e-04                    delta_phi: 7.90e-03
+time u: 6.98e-03
+residual history in solve_2d: initial residual:  8.34e-04              final residual: 8.34e-04                    delta_phi: 8.03e-03
+time v: 6.89e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.63e-04              final residual: 3.63e-04                    delta_phi: 1.53e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.47e-03
+
+--iter:88, max residul:4.54e-04, u:4.54e-04, v:4.17e-04, pp:2.82e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  88, u:-1.18e-01, v:-2.11e-01, p:-4.42e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 88, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  9.01e-04              final residual: 9.01e-04                    delta_phi: 7.78e-03
+time u: 6.88e-03
+residual history in solve_2d: initial residual:  8.26e-04              final residual: 8.26e-04                    delta_phi: 7.92e-03
+time v: 6.55e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.61e-04              final residual: 3.61e-04                    delta_phi: 1.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:89, max residul:4.50e-04, u:4.50e-04, v:4.13e-04, pp:1.16e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  89, u:-1.21e-01, v:-2.18e-01, p:-4.67e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 89, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  8.93e-04              final residual: 8.93e-04                    delta_phi: 7.62e-03
+time u: 6.83e-03
+residual history in solve_2d: initial residual:  8.17e-04              final residual: 8.17e-04                    delta_phi: 7.77e-03
+time v: 6.65e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.60e-04              final residual: 3.60e-04                    delta_phi: 1.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:90, max residul:4.46e-04, u:4.46e-04, v:4.09e-04, pp:9.43e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  90, u:-1.23e-01, v:-2.25e-01, p:-4.93e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 90, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  8.86e-04              final residual: 8.86e-04                    delta_phi: 7.48e-03
+time u: 6.94e-03
+residual history in solve_2d: initial residual:  8.08e-04              final residual: 8.08e-04                    delta_phi: 7.61e-03
+time v: 6.66e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.52e-04              final residual: 3.52e-04                    delta_phi: 1.45e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:91, max residul:4.43e-04, u:4.43e-04, v:4.04e-04, pp:7.70e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  91, u:-1.26e-01, v:-2.32e-01, p:-5.21e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 91, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  8.78e-04              final residual: 8.78e-04                    delta_phi: 7.27e-03
+time u: 7.21e-03
+residual history in solve_2d: initial residual:  7.99e-04              final residual: 7.99e-04                    delta_phi: 7.44e-03
+time v: 6.82e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.40e-04              final residual: 3.40e-04                    delta_phi: 1.43e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:92, max residul:4.39e-04, u:4.39e-04, v:4.00e-04, pp:1.78e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  92, u:-1.28e-01, v:-2.38e-01, p:-5.51e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 92, umax: 9.16e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.18e-02
+residual history in solve_2d: initial residual:  8.70e-04              final residual: 8.70e-04                    delta_phi: 7.08e-03
+time u: 6.90e-03
+residual history in solve_2d: initial residual:  7.90e-04              final residual: 7.90e-04                    delta_phi: 7.28e-03
+time v: 6.62e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.28e-04              final residual: 3.28e-04                    delta_phi: 1.41e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:93, max residul:4.35e-04, u:4.35e-04, v:3.95e-04, pp:2.39e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  93, u:-1.30e-01, v:-2.45e-01, p:-5.83e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 93, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  8.62e-04              final residual: 8.62e-04                    delta_phi: 6.94e-03
+time u: 6.98e-03
+residual history in solve_2d: initial residual:  7.81e-04              final residual: 7.81e-04                    delta_phi: 7.18e-03
+time v: 6.74e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.22e-04              final residual: 3.22e-04                    delta_phi: 1.37e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:94, max residul:4.31e-04, u:4.31e-04, v:3.90e-04, pp:4.66e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  94, u:-1.32e-01, v:-2.51e-01, p:-6.14e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 94, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.16e-02
+residual history in solve_2d: initial residual:  8.54e-04              final residual: 8.54e-04                    delta_phi: 6.84e-03
+time u: 6.74e-03
+residual history in solve_2d: initial residual:  7.72e-04              final residual: 7.72e-04                    delta_phi: 7.09e-03
+time v: 6.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.19e-04              final residual: 3.19e-04                    delta_phi: 1.34e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.67e-03
+
+--iter:95, max residul:4.27e-04, u:4.27e-04, v:3.86e-04, pp:4.99e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  95, u:-1.33e-01, v:-2.57e-01, p:-6.45e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 95, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  8.46e-04              final residual: 8.46e-04                    delta_phi: 6.73e-03
+time u: 6.84e-03
+residual history in solve_2d: initial residual:  7.63e-04              final residual: 7.63e-04                    delta_phi: 7.06e-03
+time v: 6.62e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.16e-04              final residual: 3.16e-04                    delta_phi: 1.32e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:96, max residul:4.23e-04, u:4.23e-04, v:3.82e-04, pp:1.08e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  96, u:-1.35e-01, v:-2.63e-01, p:-6.76e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 96, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  8.37e-04              final residual: 8.37e-04                    delta_phi: 6.60e-03
+time u: 6.76e-03
+residual history in solve_2d: initial residual:  7.55e-04              final residual: 7.55e-04                    delta_phi: 7.03e-03
+time v: 6.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.12e-04              final residual: 3.12e-04                    delta_phi: 1.29e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:97, max residul:4.18e-04, u:4.18e-04, v:3.77e-04, pp:5.42e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  97, u:-1.36e-01, v:-2.69e-01, p:-7.09e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 97, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  8.28e-04              final residual: 8.28e-04                    delta_phi: 6.38e-03
+time u: 7.02e-03
+residual history in solve_2d: initial residual:  7.46e-04              final residual: 7.46e-04                    delta_phi: 6.95e-03
+time v: 6.77e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.09e-04              final residual: 3.09e-04                    delta_phi: 1.26e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:98, max residul:4.14e-04, u:4.14e-04, v:3.73e-04, pp:7.48e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  98, u:-1.37e-01, v:-2.75e-01, p:-7.42e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 98, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  8.20e-04              final residual: 8.20e-04                    delta_phi: 6.13e-03
+time u: 6.96e-03
+residual history in solve_2d: initial residual:  7.38e-04              final residual: 7.38e-04                    delta_phi: 6.84e-03
+time v: 6.73e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  3.06e-04              final residual: 3.06e-04                    delta_phi: 1.24e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.59e-03
+
+--iter:99, max residul:4.10e-04, u:4.10e-04, v:3.69e-04, pp:1.25e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration:  99, u:-1.38e-01, v:-2.80e-01, p:-7.76e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 99, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  8.12e-04              final residual: 8.12e-04                    delta_phi: 5.99e-03
+time u: 6.80e-03
+residual history in solve_2d: initial residual:  7.29e-04              final residual: 7.29e-04                    delta_phi: 6.72e-03
+time v: 6.50e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.96e-04              final residual: 2.96e-04                    delta_phi: 1.23e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:100, max residul:4.06e-04, u:4.06e-04, v:3.65e-04, pp:3.58e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 100, u:-1.39e-01, v:-2.85e-01, p:-8.11e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 100, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  8.04e-04              final residual: 8.04e-04                    delta_phi: 5.96e-03
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  7.21e-04              final residual: 7.21e-04                    delta_phi: 6.61e-03
+time v: 6.70e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.87e-04              final residual: 2.87e-04                    delta_phi: 1.21e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:101, max residul:4.02e-04, u:4.02e-04, v:3.61e-04, pp:3.25e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 101, u:-1.40e-01, v:-2.90e-01, p:-8.47e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 101, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  7.96e-04              final residual: 7.96e-04                    delta_phi: 5.87e-03
+time u: 6.82e-03
+residual history in solve_2d: initial residual:  7.13e-04              final residual: 7.13e-04                    delta_phi: 6.50e-03
+time v: 6.59e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.81e-04              final residual: 2.81e-04                    delta_phi: 1.18e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:102, max residul:3.98e-04, u:3.98e-04, v:3.56e-04, pp:7.91e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 102, u:-1.41e-01, v:-2.95e-01, p:-8.83e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 102, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  7.87e-04              final residual: 7.87e-04                    delta_phi: 5.73e-03
+time u: 6.80e-03
+residual history in solve_2d: initial residual:  7.04e-04              final residual: 7.04e-04                    delta_phi: 6.38e-03
+time v: 6.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.75e-04              final residual: 2.75e-04                    delta_phi: 1.15e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.45e-03
+
+--iter:103, max residul:3.94e-04, u:3.94e-04, v:3.52e-04, pp:2.28e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 103, u:-1.41e-01, v:-3.00e-01, p:-9.19e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 103, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  7.79e-04              final residual: 7.79e-04                    delta_phi: 5.60e-03
+time u: 6.73e-03
+residual history in solve_2d: initial residual:  6.96e-04              final residual: 6.96e-04                    delta_phi: 6.26e-03
+time v: 6.60e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.68e-04              final residual: 2.68e-04                    delta_phi: 1.13e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:104, max residul:3.90e-04, u:3.90e-04, v:3.48e-04, pp:3.17e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 104, u:-1.41e-01, v:-3.05e-01, p:-9.56e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 104, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  7.71e-04              final residual: 7.71e-04                    delta_phi: 5.46e-03
+time u: 6.93e-03
+residual history in solve_2d: initial residual:  6.88e-04              final residual: 6.88e-04                    delta_phi: 6.15e-03
+time v: 6.68e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.63e-04              final residual: 2.63e-04                    delta_phi: 1.10e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:105, max residul:3.85e-04, u:3.85e-04, v:3.44e-04, pp:5.85e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 105, u:-1.42e-01, v:-3.09e-01, p:-9.92e-03, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 105, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  7.62e-04              final residual: 7.62e-04                    delta_phi: 5.28e-03
+time u: 6.89e-03
+residual history in solve_2d: initial residual:  6.80e-04              final residual: 6.80e-04                    delta_phi: 6.11e-03
+time v: 6.66e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.60e-04              final residual: 2.60e-04                    delta_phi: 1.08e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:106, max residul:3.81e-04, u:3.81e-04, v:3.40e-04, pp:1.77e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 106, u:-1.42e-01, v:-3.13e-01, p:-1.03e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 106, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  7.54e-04              final residual: 7.54e-04                    delta_phi: 5.16e-03
+time u: 6.83e-03
+residual history in solve_2d: initial residual:  6.72e-04              final residual: 6.72e-04                    delta_phi: 6.11e-03
+time v: 6.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.56e-04              final residual: 2.56e-04                    delta_phi: 1.06e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:107, max residul:3.77e-04, u:3.77e-04, v:3.36e-04, pp:9.32e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 107, u:-1.42e-01, v:-3.17e-01, p:-1.06e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 107, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  7.45e-04              final residual: 7.45e-04                    delta_phi: 5.10e-03
+time u: 7.01e-03
+residual history in solve_2d: initial residual:  6.65e-04              final residual: 6.65e-04                    delta_phi: 6.06e-03
+time v: 6.68e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.51e-04              final residual: 2.51e-04                    delta_phi: 1.05e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:108, max residul:3.73e-04, u:3.73e-04, v:3.32e-04, pp:1.47e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 108, u:-1.42e-01, v:-3.21e-01, p:-1.10e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 108, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  7.37e-04              final residual: 7.37e-04                    delta_phi: 5.01e-03
+time u: 6.74e-03
+residual history in solve_2d: initial residual:  6.57e-04              final residual: 6.57e-04                    delta_phi: 5.99e-03
+time v: 6.50e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.46e-04              final residual: 2.46e-04                    delta_phi: 1.03e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.44e-03
+
+--iter:109, max residul:3.69e-04, u:3.69e-04, v:3.29e-04, pp:1.10e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 109, u:-1.41e-01, v:-3.25e-01, p:-1.14e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 109, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  7.29e-04              final residual: 7.29e-04                    delta_phi: 4.92e-03
+time u: 6.83e-03
+residual history in solve_2d: initial residual:  6.50e-04              final residual: 6.50e-04                    delta_phi: 5.90e-03
+time v: 6.55e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.38e-04              final residual: 2.38e-04                    delta_phi: 1.01e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.45e-03
+
+--iter:110, max residul:3.65e-04, u:3.65e-04, v:3.25e-04, pp:8.13e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 110, u:-1.41e-01, v:-3.29e-01, p:-1.17e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 110, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  7.21e-04              final residual: 7.21e-04                    delta_phi: 4.82e-03
+time u: 6.72e-03
+residual history in solve_2d: initial residual:  6.42e-04              final residual: 6.42e-04                    delta_phi: 5.79e-03
+time v: 6.46e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.32e-04              final residual: 2.32e-04                    delta_phi: 9.83e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:111, max residul:3.60e-04, u:3.60e-04, v:3.21e-04, pp:2.43e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 111, u:-1.41e-01, v:-3.32e-01, p:-1.21e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 111, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  7.13e-04              final residual: 7.13e-04                    delta_phi: 4.68e-03
+time u: 6.86e-03
+residual history in solve_2d: initial residual:  6.35e-04              final residual: 6.35e-04                    delta_phi: 5.68e-03
+time v: 6.56e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.28e-04              final residual: 2.28e-04                    delta_phi: 9.66e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:112, max residul:3.56e-04, u:3.56e-04, v:3.17e-04, pp:6.37e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 112, u:-1.40e-01, v:-3.35e-01, p:-1.24e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 112, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  7.05e-04              final residual: 7.05e-04                    delta_phi: 4.56e-03
+time u: 6.94e-03
+residual history in solve_2d: initial residual:  6.28e-04              final residual: 6.28e-04                    delta_phi: 5.59e-03
+time v: 6.61e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.24e-04              final residual: 2.24e-04                    delta_phi: 9.49e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:113, max residul:3.52e-04, u:3.52e-04, v:3.14e-04, pp:5.35e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 113, u:-1.40e-01, v:-3.38e-01, p:-1.28e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 113, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  6.97e-04              final residual: 6.97e-04                    delta_phi: 4.44e-03
+time u: 6.91e-03
+residual history in solve_2d: initial residual:  6.21e-04              final residual: 6.21e-04                    delta_phi: 5.49e-03
+time v: 6.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.20e-04              final residual: 2.20e-04                    delta_phi: 9.31e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:114, max residul:3.48e-04, u:3.48e-04, v:3.10e-04, pp:4.38e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 114, u:-1.39e-01, v:-3.41e-01, p:-1.31e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 114, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  6.89e-04              final residual: 6.89e-04                    delta_phi: 4.41e-03
+time u: 6.81e-03
+residual history in solve_2d: initial residual:  6.14e-04              final residual: 6.14e-04                    delta_phi: 5.39e-03
+time v: 6.53e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.13e-04              final residual: 2.13e-04                    delta_phi: 9.10e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:115, max residul:3.44e-04, u:3.44e-04, v:3.07e-04, pp:2.57e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 115, u:-1.39e-01, v:-3.44e-01, p:-1.34e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 115, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  6.81e-04              final residual: 6.81e-04                    delta_phi: 4.36e-03
+time u: 6.73e-03
+residual history in solve_2d: initial residual:  6.06e-04              final residual: 6.06e-04                    delta_phi: 5.29e-03
+time v: 6.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.08e-04              final residual: 2.08e-04                    delta_phi: 8.93e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:116, max residul:3.40e-04, u:3.40e-04, v:3.03e-04, pp:4.30e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 116, u:-1.38e-01, v:-3.47e-01, p:-1.38e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 116, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  6.73e-04              final residual: 6.73e-04                    delta_phi: 4.29e-03
+time u: 6.88e-03
+residual history in solve_2d: initial residual:  5.99e-04              final residual: 5.99e-04                    delta_phi: 5.24e-03
+time v: 6.66e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.04e-04              final residual: 2.04e-04                    delta_phi: 8.75e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.46e-03
+
+--iter:117, max residul:3.36e-04, u:3.36e-04, v:3.00e-04, pp:3.43e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 117, u:-1.37e-01, v:-3.49e-01, p:-1.41e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 117, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  6.65e-04              final residual: 6.65e-04                    delta_phi: 4.22e-03
+time u: 6.87e-03
+residual history in solve_2d: initial residual:  5.93e-04              final residual: 5.93e-04                    delta_phi: 5.22e-03
+time v: 6.59e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  2.00e-04              final residual: 2.00e-04                    delta_phi: 8.57e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:118, max residul:3.32e-04, u:3.32e-04, v:2.96e-04, pp:3.25e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 118, u:-1.36e-01, v:-3.52e-01, p:-1.44e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 118, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  6.57e-04              final residual: 6.57e-04                    delta_phi: 4.13e-03
+time u: 6.78e-03
+residual history in solve_2d: initial residual:  5.86e-04              final residual: 5.86e-04                    delta_phi: 5.17e-03
+time v: 6.50e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.96e-04              final residual: 1.96e-04                    delta_phi: 8.36e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:119, max residul:3.28e-04, u:3.28e-04, v:2.93e-04, pp:1.41e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 119, u:-1.35e-01, v:-3.54e-01, p:-1.47e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 119, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  6.49e-04              final residual: 6.49e-04                    delta_phi: 4.05e-03
+time u: 6.80e-03
+residual history in solve_2d: initial residual:  5.79e-04              final residual: 5.79e-04                    delta_phi: 5.11e-03
+time v: 6.50e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.91e-04              final residual: 1.91e-04                    delta_phi: 8.24e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.66e-03
+
+--iter:120, max residul:3.24e-04, u:3.24e-04, v:2.90e-04, pp:2.67e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 120, u:-1.35e-01, v:-3.56e-01, p:-1.50e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 120, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  6.41e-04              final residual: 6.41e-04                    delta_phi: 4.04e-03
+time u: 6.91e-03
+residual history in solve_2d: initial residual:  5.73e-04              final residual: 5.73e-04                    delta_phi: 5.05e-03
+time v: 6.60e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.88e-04              final residual: 1.88e-04                    delta_phi: 8.10e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:121, max residul:3.20e-04, u:3.20e-04, v:2.86e-04, pp:9.05e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 121, u:-1.34e-01, v:-3.58e-01, p:-1.53e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 121, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  6.33e-04              final residual: 6.33e-04                    delta_phi: 4.03e-03
+time u: 6.79e-03
+residual history in solve_2d: initial residual:  5.66e-04              final residual: 5.66e-04                    delta_phi: 4.97e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.83e-04              final residual: 1.83e-04                    delta_phi: 7.98e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:122, max residul:3.17e-04, u:3.17e-04, v:2.83e-04, pp:3.60e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 122, u:-1.33e-01, v:-3.60e-01, p:-1.56e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 122, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  6.26e-04              final residual: 6.26e-04                    delta_phi: 4.01e-03
+time u: 6.82e-03
+residual history in solve_2d: initial residual:  5.59e-04              final residual: 5.59e-04                    delta_phi: 4.90e-03
+time v: 6.66e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.78e-04              final residual: 1.78e-04                    delta_phi: 7.84e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.64e-03
+
+--iter:123, max residul:3.13e-04, u:3.13e-04, v:2.80e-04, pp:1.36e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 123, u:-1.32e-01, v:-3.62e-01, p:-1.59e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 123, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  6.18e-04              final residual: 6.18e-04                    delta_phi: 3.98e-03
+time u: 6.87e-03
+residual history in solve_2d: initial residual:  5.53e-04              final residual: 5.53e-04                    delta_phi: 4.82e-03
+time v: 6.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.74e-04              final residual: 1.74e-04                    delta_phi: 7.63e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:124, max residul:3.09e-04, u:3.09e-04, v:2.77e-04, pp:6.18e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 124, u:-1.31e-01, v:-3.64e-01, p:-1.62e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 124, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  6.11e-04              final residual: 6.11e-04                    delta_phi: 3.93e-03
+time u: 6.86e-03
+residual history in solve_2d: initial residual:  5.47e-04              final residual: 5.47e-04                    delta_phi: 4.74e-03
+time v: 6.51e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.71e-04              final residual: 1.71e-04                    delta_phi: 7.47e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:125, max residul:3.05e-04, u:3.05e-04, v:2.73e-04, pp:1.79e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 125, u:-1.30e-01, v:-3.65e-01, p:-1.65e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 125, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  6.04e-04              final residual: 6.04e-04                    delta_phi: 3.86e-03
+time u: 6.70e-03
+residual history in solve_2d: initial residual:  5.40e-04              final residual: 5.40e-04                    delta_phi: 4.65e-03
+time v: 6.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.67e-04              final residual: 1.67e-04                    delta_phi: 7.33e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:126, max residul:3.02e-04, u:3.02e-04, v:2.70e-04, pp:1.49e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 126, u:-1.29e-01, v:-3.67e-01, p:-1.67e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 126, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  5.96e-04              final residual: 5.96e-04                    delta_phi: 3.85e-03
+time u: 6.67e-03
+residual history in solve_2d: initial residual:  5.34e-04              final residual: 5.34e-04                    delta_phi: 4.56e-03
+time v: 6.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.64e-04              final residual: 1.64e-04                    delta_phi: 7.19e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:127, max residul:2.98e-04, u:2.98e-04, v:2.67e-04, pp:3.63e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 127, u:-1.28e-01, v:-3.68e-01, p:-1.70e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 127, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  5.89e-04              final residual: 5.89e-04                    delta_phi: 3.83e-03
+time u: 6.76e-03
+residual history in solve_2d: initial residual:  5.28e-04              final residual: 5.28e-04                    delta_phi: 4.47e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.60e-04              final residual: 1.60e-04                    delta_phi: 7.05e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.44e-03
+
+--iter:128, max residul:2.94e-04, u:2.94e-04, v:2.64e-04, pp:1.02e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 128, u:-1.27e-01, v:-3.70e-01, p:-1.73e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 128, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  5.82e-04              final residual: 5.82e-04                    delta_phi: 3.81e-03
+time u: 6.81e-03
+residual history in solve_2d: initial residual:  5.22e-04              final residual: 5.22e-04                    delta_phi: 4.46e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.57e-04              final residual: 1.57e-04                    delta_phi: 6.91e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:129, max residul:2.91e-04, u:2.91e-04, v:2.61e-04, pp:6.56e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 129, u:-1.26e-01, v:-3.71e-01, p:-1.75e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 129, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  5.75e-04              final residual: 5.75e-04                    delta_phi: 3.78e-03
+time u: 6.67e-03
+residual history in solve_2d: initial residual:  5.15e-04              final residual: 5.15e-04                    delta_phi: 4.43e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.55e-04              final residual: 1.55e-04                    delta_phi: 6.80e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.49e-03
+
+--iter:130, max residul:2.87e-04, u:2.87e-04, v:2.58e-04, pp:1.46e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 130, u:-1.25e-01, v:-3.72e-01, p:-1.78e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 130, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  5.68e-04              final residual: 5.68e-04                    delta_phi: 3.74e-03
+time u: 6.69e-03
+residual history in solve_2d: initial residual:  5.09e-04              final residual: 5.09e-04                    delta_phi: 4.39e-03
+time v: 6.50e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.51e-04              final residual: 1.51e-04                    delta_phi: 6.68e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:131, max residul:2.84e-04, u:2.84e-04, v:2.55e-04, pp:9.16e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 131, u:-1.24e-01, v:-3.73e-01, p:-1.80e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 131, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  5.61e-04              final residual: 5.61e-04                    delta_phi: 3.70e-03
+time u: 6.65e-03
+residual history in solve_2d: initial residual:  5.03e-04              final residual: 5.03e-04                    delta_phi: 4.33e-03
+time v: 6.38e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.47e-04              final residual: 1.47e-04                    delta_phi: 6.54e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.46e-03
+
+--iter:132, max residul:2.80e-04, u:2.80e-04, v:2.52e-04, pp:5.31e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 132, u:-1.23e-01, v:-3.75e-01, p:-1.82e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 132, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.07e-02
+residual history in solve_2d: initial residual:  5.54e-04              final residual: 5.54e-04                    delta_phi: 3.63e-03
+time u: 6.78e-03
+residual history in solve_2d: initial residual:  4.97e-04              final residual: 4.97e-04                    delta_phi: 4.27e-03
+time v: 6.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.44e-04              final residual: 1.44e-04                    delta_phi: 6.38e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:133, max residul:2.77e-04, u:2.77e-04, v:2.49e-04, pp:6.18e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 133, u:-1.22e-01, v:-3.76e-01, p:-1.84e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 133, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  5.47e-04              final residual: 5.47e-04                    delta_phi: 3.61e-03
+time u: 6.70e-03
+residual history in solve_2d: initial residual:  4.92e-04              final residual: 4.92e-04                    delta_phi: 4.19e-03
+time v: 6.42e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.42e-04              final residual: 1.42e-04                    delta_phi: 6.27e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:134, max residul:2.74e-04, u:2.74e-04, v:2.46e-04, pp:1.20e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 134, u:-1.21e-01, v:-3.77e-01, p:-1.87e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 134, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  5.41e-04              final residual: 5.41e-04                    delta_phi: 3.61e-03
+time u: 6.60e-03
+residual history in solve_2d: initial residual:  4.86e-04              final residual: 4.86e-04                    delta_phi: 4.12e-03
+time v: 6.35e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.38e-04              final residual: 1.38e-04                    delta_phi: 6.19e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.75e-03
+
+--iter:135, max residul:2.70e-04, u:2.70e-04, v:2.43e-04, pp:7.81e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 135, u:-1.20e-01, v:-3.77e-01, p:-1.89e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 135, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  5.34e-04              final residual: 5.34e-04                    delta_phi: 3.58e-03
+time u: 6.74e-03
+residual history in solve_2d: initial residual:  4.80e-04              final residual: 4.80e-04                    delta_phi: 4.05e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.35e-04              final residual: 1.35e-04                    delta_phi: 6.09e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:136, max residul:2.67e-04, u:2.67e-04, v:2.40e-04, pp:1.14e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 136, u:-1.19e-01, v:-3.78e-01, p:-1.91e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 136, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  5.28e-04              final residual: 5.28e-04                    delta_phi: 3.55e-03
+time u: 6.80e-03
+residual history in solve_2d: initial residual:  4.74e-04              final residual: 4.74e-04                    delta_phi: 3.97e-03
+time v: 6.68e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.32e-04              final residual: 1.32e-04                    delta_phi: 5.97e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.58e-03
+
+--iter:137, max residul:2.64e-04, u:2.64e-04, v:2.37e-04, pp:4.66e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 137, u:-1.18e-01, v:-3.79e-01, p:-1.93e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 137, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  5.21e-04              final residual: 5.21e-04                    delta_phi: 3.51e-03
+time u: 6.56e-03
+residual history in solve_2d: initial residual:  4.69e-04              final residual: 4.69e-04                    delta_phi: 3.90e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.29e-04              final residual: 1.29e-04                    delta_phi: 5.85e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:138, max residul:2.61e-04, u:2.61e-04, v:2.34e-04, pp:3.14e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 138, u:-1.16e-01, v:-3.80e-01, p:-1.95e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 138, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  5.15e-04              final residual: 5.15e-04                    delta_phi: 3.46e-03
+time u: 6.78e-03
+residual history in solve_2d: initial residual:  4.63e-04              final residual: 4.63e-04                    delta_phi: 3.83e-03
+time v: 6.61e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.26e-04              final residual: 1.26e-04                    delta_phi: 5.74e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:139, max residul:2.57e-04, u:2.57e-04, v:2.32e-04, pp:1.19e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 139, u:-1.15e-01, v:-3.81e-01, p:-1.97e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 139, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  5.09e-04              final residual: 5.09e-04                    delta_phi: 3.42e-03
+time u: 6.86e-03
+residual history in solve_2d: initial residual:  4.57e-04              final residual: 4.57e-04                    delta_phi: 3.79e-03
+time v: 6.56e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.23e-04              final residual: 1.23e-04                    delta_phi: 5.63e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:140, max residul:2.54e-04, u:2.54e-04, v:2.29e-04, pp:4.12e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 140, u:-1.14e-01, v:-3.81e-01, p:-1.99e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 140, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  5.03e-04              final residual: 5.03e-04                    delta_phi: 3.40e-03
+time u: 6.95e-03
+residual history in solve_2d: initial residual:  4.52e-04              final residual: 4.52e-04                    delta_phi: 3.76e-03
+time v: 6.79e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.20e-04              final residual: 1.20e-04                    delta_phi: 5.53e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:141, max residul:2.51e-04, u:2.51e-04, v:2.26e-04, pp:9.54e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 141, u:-1.13e-01, v:-3.82e-01, p:-2.00e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 141, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  4.97e-04              final residual: 4.97e-04                    delta_phi: 3.37e-03
+time u: 6.91e-03
+residual history in solve_2d: initial residual:  4.47e-04              final residual: 4.47e-04                    delta_phi: 3.71e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.18e-04              final residual: 1.18e-04                    delta_phi: 5.44e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:142, max residul:2.48e-04, u:2.48e-04, v:2.23e-04, pp:6.07e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 142, u:-1.13e-01, v:-3.83e-01, p:-2.02e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 142, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  4.91e-04              final residual: 4.91e-04                    delta_phi: 3.35e-03
+time u: 6.53e-03
+residual history in solve_2d: initial residual:  4.41e-04              final residual: 4.41e-04                    delta_phi: 3.66e-03
+time v: 6.26e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.15e-04              final residual: 1.15e-04                    delta_phi: 5.35e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:143, max residul:2.45e-04, u:2.45e-04, v:2.21e-04, pp:5.96e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 143, u:-1.12e-01, v:-3.83e-01, p:-2.04e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 143, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.05e-02
+residual history in solve_2d: initial residual:  4.85e-04              final residual: 4.85e-04                    delta_phi: 3.32e-03
+time u: 6.79e-03
+residual history in solve_2d: initial residual:  4.36e-04              final residual: 4.36e-04                    delta_phi: 3.62e-03
+time v: 6.36e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.13e-04              final residual: 1.13e-04                    delta_phi: 5.26e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.42e-03
+
+--iter:144, max residul:2.43e-04, u:2.43e-04, v:2.18e-04, pp:1.24e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 144, u:-1.11e-01, v:-3.84e-01, p:-2.06e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 144, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  4.79e-04              final residual: 4.79e-04                    delta_phi: 3.28e-03
+time u: 6.66e-03
+residual history in solve_2d: initial residual:  4.31e-04              final residual: 4.31e-04                    delta_phi: 3.58e-03
+time v: 6.45e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.11e-04              final residual: 1.11e-04                    delta_phi: 5.15e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.45e-03
+
+--iter:145, max residul:2.40e-04, u:2.40e-04, v:2.15e-04, pp:2.17e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 145, u:-1.10e-01, v:-3.84e-01, p:-2.07e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 145, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  4.74e-04              final residual: 4.74e-04                    delta_phi: 3.23e-03
+time u: 6.79e-03
+residual history in solve_2d: initial residual:  4.25e-04              final residual: 4.25e-04                    delta_phi: 3.53e-03
+time v: 6.48e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.09e-04              final residual: 1.09e-04                    delta_phi: 5.07e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.40e-03
+
+--iter:146, max residul:2.37e-04, u:2.37e-04, v:2.13e-04, pp:1.05e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 146, u:-1.09e-01, v:-3.85e-01, p:-2.09e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 146, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  4.68e-04              final residual: 4.68e-04                    delta_phi: 3.21e-03
+time u: 6.73e-03
+residual history in solve_2d: initial residual:  4.20e-04              final residual: 4.20e-04                    delta_phi: 3.48e-03
+time v: 6.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.07e-04              final residual: 1.07e-04                    delta_phi: 4.99e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.57e-03
+
+--iter:147, max residul:2.34e-04, u:2.34e-04, v:2.10e-04, pp:8.46e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 147, u:-1.08e-01, v:-3.85e-01, p:-2.11e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 147, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  4.63e-04              final residual: 4.63e-04                    delta_phi: 3.19e-03
+time u: 6.95e-03
+residual history in solve_2d: initial residual:  4.15e-04              final residual: 4.15e-04                    delta_phi: 3.42e-03
+time v: 6.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.05e-04              final residual: 1.05e-04                    delta_phi: 4.91e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.59e-03
+
+--iter:148, max residul:2.31e-04, u:2.31e-04, v:2.08e-04, pp:2.71e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 148, u:-1.07e-01, v:-3.85e-01, p:-2.12e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 148, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  4.57e-04              final residual: 4.57e-04                    delta_phi: 3.16e-03
+time u: 6.80e-03
+residual history in solve_2d: initial residual:  4.10e-04              final residual: 4.10e-04                    delta_phi: 3.36e-03
+time v: 6.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.03e-04              final residual: 1.03e-04                    delta_phi: 4.82e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.45e-03
+
+--iter:149, max residul:2.29e-04, u:2.29e-04, v:2.05e-04, pp:4.77e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 149, u:-1.06e-01, v:-3.86e-01, p:-2.14e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 149, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  4.52e-04              final residual: 4.52e-04                    delta_phi: 3.12e-03
+time u: 6.59e-03
+residual history in solve_2d: initial residual:  4.05e-04              final residual: 4.05e-04                    delta_phi: 3.29e-03
+time v: 6.41e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  1.01e-04              final residual: 1.01e-04                    delta_phi: 4.73e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:150, max residul:2.26e-04, u:2.26e-04, v:2.03e-04, pp:5.42e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 150, u:-1.05e-01, v:-3.86e-01, p:-2.15e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 150, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  4.47e-04              final residual: 4.47e-04                    delta_phi: 3.09e-03
+time u: 6.78e-03
+residual history in solve_2d: initial residual:  4.00e-04              final residual: 4.00e-04                    delta_phi: 3.24e-03
+time v: 6.54e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.89e-05              final residual: 9.89e-05                    delta_phi: 4.65e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:151, max residul:2.23e-04, u:2.23e-04, v:2.00e-04, pp:7.81e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 151, u:-1.04e-01, v:-3.86e-01, p:-2.16e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 151, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  4.42e-04              final residual: 4.42e-04                    delta_phi: 3.06e-03
+time u: 6.69e-03
+residual history in solve_2d: initial residual:  3.96e-04              final residual: 3.96e-04                    delta_phi: 3.18e-03
+time v: 6.40e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.69e-05              final residual: 9.69e-05                    delta_phi: 4.59e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:152, max residul:2.21e-04, u:2.21e-04, v:1.98e-04, pp:1.30e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 152, u:-1.03e-01, v:-3.87e-01, p:-2.18e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 152, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  4.37e-04              final residual: 4.37e-04                    delta_phi: 3.03e-03
+time u: 6.70e-03
+residual history in solve_2d: initial residual:  3.91e-04              final residual: 3.91e-04                    delta_phi: 3.14e-03
+time v: 6.41e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.52e-05              final residual: 9.52e-05                    delta_phi: 4.53e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.44e-03
+
+--iter:153, max residul:2.18e-04, u:2.18e-04, v:1.95e-04, pp:8.78e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 153, u:-1.03e-01, v:-3.87e-01, p:-2.19e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 153, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  4.32e-04              final residual: 4.32e-04                    delta_phi: 3.01e-03
+time u: 6.79e-03
+residual history in solve_2d: initial residual:  3.86e-04              final residual: 3.86e-04                    delta_phi: 3.11e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.39e-05              final residual: 9.39e-05                    delta_phi: 4.46e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:154, max residul:2.16e-04, u:2.16e-04, v:1.93e-04, pp:9.22e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 154, u:-1.02e-01, v:-3.87e-01, p:-2.21e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 154, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  4.27e-04              final residual: 4.27e-04                    delta_phi: 2.98e-03
+time u: 6.53e-03
+residual history in solve_2d: initial residual:  3.81e-04              final residual: 3.81e-04                    delta_phi: 3.07e-03
+time v: 6.41e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.18e-05              final residual: 9.18e-05                    delta_phi: 4.39e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:155, max residul:2.13e-04, u:2.13e-04, v:1.91e-04, pp:4.55e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 155, u:-1.01e-01, v:-3.88e-01, p:-2.22e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 155, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.07e-02
+residual history in solve_2d: initial residual:  4.22e-04              final residual: 4.22e-04                    delta_phi: 2.95e-03
+time u: 6.84e-03
+residual history in solve_2d: initial residual:  3.77e-04              final residual: 3.77e-04                    delta_phi: 3.03e-03
+time v: 6.48e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  9.00e-05              final residual: 9.00e-05                    delta_phi: 4.32e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.43e-03
+
+--iter:156, max residul:2.11e-04, u:2.11e-04, v:1.88e-04, pp:1.38e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 156, u:-1.00e-01, v:-3.88e-01, p:-2.23e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 156, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  4.17e-04              final residual: 4.17e-04                    delta_phi: 2.92e-03
+time u: 6.65e-03
+residual history in solve_2d: initial residual:  3.72e-04              final residual: 3.72e-04                    delta_phi: 2.98e-03
+time v: 6.24e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.86e-05              final residual: 8.86e-05                    delta_phi: 4.24e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:157, max residul:2.08e-04, u:2.08e-04, v:1.86e-04, pp:3.04e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 157, u:-9.94e-02, v:-3.88e-01, p:-2.24e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 157, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.06e-02
+residual history in solve_2d: initial residual:  4.12e-04              final residual: 4.12e-04                    delta_phi: 2.89e-03
+time u: 6.76e-03
+residual history in solve_2d: initial residual:  3.68e-04              final residual: 3.68e-04                    delta_phi: 2.93e-03
+time v: 6.51e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.70e-05              final residual: 8.70e-05                    delta_phi: 4.17e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:158, max residul:2.06e-04, u:2.06e-04, v:1.84e-04, pp:1.38e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 158, u:-9.87e-02, v:-3.88e-01, p:-2.26e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 158, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  4.07e-04              final residual: 4.07e-04                    delta_phi: 2.86e-03
+time u: 6.76e-03
+residual history in solve_2d: initial residual:  3.63e-04              final residual: 3.63e-04                    delta_phi: 2.89e-03
+time v: 6.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.53e-05              final residual: 8.53e-05                    delta_phi: 4.11e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:159, max residul:2.04e-04, u:2.04e-04, v:1.82e-04, pp:2.21e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 159, u:-9.79e-02, v:-3.89e-01, p:-2.27e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 159, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  4.03e-04              final residual: 4.03e-04                    delta_phi: 2.83e-03
+time u: 6.49e-03
+residual history in solve_2d: initial residual:  3.59e-04              final residual: 3.59e-04                    delta_phi: 2.84e-03
+time v: 6.38e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.36e-05              final residual: 8.36e-05                    delta_phi: 4.06e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:160, max residul:2.01e-04, u:2.01e-04, v:1.79e-04, pp:6.99e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 160, u:-9.72e-02, v:-3.89e-01, p:-2.28e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 160, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.06e-02
+residual history in solve_2d: initial residual:  3.98e-04              final residual: 3.98e-04                    delta_phi: 2.81e-03
+time u: 6.60e-03
+residual history in solve_2d: initial residual:  3.55e-04              final residual: 3.55e-04                    delta_phi: 2.81e-03
+time v: 6.41e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.18e-05              final residual: 8.18e-05                    delta_phi: 4.01e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:161, max residul:1.99e-04, u:1.99e-04, v:1.77e-04, pp:1.46e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 161, u:-9.65e-02, v:-3.89e-01, p:-2.29e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 161, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  3.94e-04              final residual: 3.94e-04                    delta_phi: 2.79e-03
+time u: 6.75e-03
+residual history in solve_2d: initial residual:  3.50e-04              final residual: 3.50e-04                    delta_phi: 2.77e-03
+time v: 6.53e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  8.03e-05              final residual: 8.03e-05                    delta_phi: 3.95e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:162, max residul:1.97e-04, u:1.97e-04, v:1.75e-04, pp:5.75e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 162, u:-9.58e-02, v:-3.89e-01, p:-2.30e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 162, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.89e-04              final residual: 3.89e-04                    delta_phi: 2.76e-03
+time u: 7.03e-03
+residual history in solve_2d: initial residual:  3.46e-04              final residual: 3.46e-04                    delta_phi: 2.72e-03
+time v: 6.53e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.88e-05              final residual: 7.88e-05                    delta_phi: 3.88e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:163, max residul:1.95e-04, u:1.95e-04, v:1.73e-04, pp:1.31e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 163, u:-9.51e-02, v:-3.89e-01, p:-2.32e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 163, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.14e-02
+residual history in solve_2d: initial residual:  3.85e-04              final residual: 3.85e-04                    delta_phi: 2.73e-03
+time u: 6.87e-03
+residual history in solve_2d: initial residual:  3.42e-04              final residual: 3.42e-04                    delta_phi: 2.68e-03
+time v: 6.60e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.72e-05              final residual: 7.72e-05                    delta_phi: 3.82e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:164, max residul:1.92e-04, u:1.92e-04, v:1.71e-04, pp:1.08e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 164, u:-9.44e-02, v:-3.90e-01, p:-2.33e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 164, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  3.81e-04              final residual: 3.81e-04                    delta_phi: 2.71e-03
+time u: 6.79e-03
+residual history in solve_2d: initial residual:  3.38e-04              final residual: 3.38e-04                    delta_phi: 2.64e-03
+time v: 6.55e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.53e-05              final residual: 7.53e-05                    delta_phi: 3.76e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.59e-03
+
+--iter:165, max residul:1.90e-04, u:1.90e-04, v:1.69e-04, pp:2.39e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 165, u:-9.38e-02, v:-3.90e-01, p:-2.34e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 165, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  3.76e-04              final residual: 3.76e-04                    delta_phi: 2.68e-03
+time u: 6.68e-03
+residual history in solve_2d: initial residual:  3.34e-04              final residual: 3.34e-04                    delta_phi: 2.59e-03
+time v: 6.42e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.36e-05              final residual: 7.36e-05                    delta_phi: 3.72e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.63e-03
+
+--iter:166, max residul:1.88e-04, u:1.88e-04, v:1.67e-04, pp:4.45e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 166, u:-9.31e-02, v:-3.90e-01, p:-2.35e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 166, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.72e-04              final residual: 3.72e-04                    delta_phi: 2.65e-03
+time u: 6.81e-03
+residual history in solve_2d: initial residual:  3.30e-04              final residual: 3.30e-04                    delta_phi: 2.55e-03
+time v: 6.58e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.23e-05              final residual: 7.23e-05                    delta_phi: 3.66e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:167, max residul:1.86e-04, u:1.86e-04, v:1.65e-04, pp:5.31e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 167, u:-9.25e-02, v:-3.90e-01, p:-2.36e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 167, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  3.68e-04              final residual: 3.68e-04                    delta_phi: 2.62e-03
+time u: 6.97e-03
+residual history in solve_2d: initial residual:  3.26e-04              final residual: 3.26e-04                    delta_phi: 2.51e-03
+time v: 6.63e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.13e-05              final residual: 7.13e-05                    delta_phi: 3.61e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.63e-03
+
+--iter:168, max residul:1.84e-04, u:1.84e-04, v:1.63e-04, pp:1.54e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 168, u:-9.19e-02, v:-3.90e-01, p:-2.37e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 168, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.15e-02
+residual history in solve_2d: initial residual:  3.64e-04              final residual: 3.64e-04                    delta_phi: 2.60e-03
+time u: 6.68e-03
+residual history in solve_2d: initial residual:  3.22e-04              final residual: 3.22e-04                    delta_phi: 2.49e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  7.03e-05              final residual: 7.03e-05                    delta_phi: 3.56e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:169, max residul:1.82e-04, u:1.82e-04, v:1.61e-04, pp:9.38e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 169, u:-9.13e-02, v:-3.90e-01, p:-2.38e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 169, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  3.60e-04              final residual: 3.60e-04                    delta_phi: 2.58e-03
+time u: 6.69e-03
+residual history in solve_2d: initial residual:  3.18e-04              final residual: 3.18e-04                    delta_phi: 2.46e-03
+time v: 6.51e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.92e-05              final residual: 6.92e-05                    delta_phi: 3.51e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:170, max residul:1.80e-04, u:1.80e-04, v:1.59e-04, pp:8.89e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 170, u:-9.07e-02, v:-3.90e-01, p:-2.39e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 170, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.56e-04              final residual: 3.56e-04                    delta_phi: 2.56e-03
+time u: 6.81e-03
+residual history in solve_2d: initial residual:  3.15e-04              final residual: 3.15e-04                    delta_phi: 2.42e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.78e-05              final residual: 6.78e-05                    delta_phi: 3.46e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.65e-03
+
+--iter:171, max residul:1.78e-04, u:1.78e-04, v:1.57e-04, pp:1.68e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 171, u:-9.01e-02, v:-3.91e-01, p:-2.40e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 171, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.13e-02
+residual history in solve_2d: initial residual:  3.52e-04              final residual: 3.52e-04                    delta_phi: 2.53e-03
+time u: 6.73e-03
+residual history in solve_2d: initial residual:  3.11e-04              final residual: 3.11e-04                    delta_phi: 2.39e-03
+time v: 6.36e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.65e-05              final residual: 6.65e-05                    delta_phi: 3.41e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:172, max residul:1.76e-04, u:1.76e-04, v:1.55e-04, pp:1.26e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 172, u:-8.96e-02, v:-3.91e-01, p:-2.41e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 172, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  3.48e-04              final residual: 3.48e-04                    delta_phi: 2.51e-03
+time u: 6.86e-03
+residual history in solve_2d: initial residual:  3.07e-04              final residual: 3.07e-04                    delta_phi: 2.35e-03
+time v: 6.57e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.53e-05              final residual: 6.53e-05                    delta_phi: 3.37e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.43e-03
+
+--iter:173, max residul:1.74e-04, u:1.74e-04, v:1.54e-04, pp:8.13e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 173, u:-8.90e-02, v:-3.91e-01, p:-2.42e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 173, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  3.44e-04              final residual: 3.44e-04                    delta_phi: 2.48e-03
+time u: 6.63e-03
+residual history in solve_2d: initial residual:  3.04e-04              final residual: 3.04e-04                    delta_phi: 2.32e-03
+time v: 6.29e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.43e-05              final residual: 6.43e-05                    delta_phi: 3.32e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.44e-03
+
+--iter:174, max residul:1.72e-04, u:1.72e-04, v:1.52e-04, pp:1.60e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 174, u:-8.85e-02, v:-3.91e-01, p:-2.43e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 174, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.06e-02
+residual history in solve_2d: initial residual:  3.40e-04              final residual: 3.40e-04                    delta_phi: 2.46e-03
+time u: 6.67e-03
+residual history in solve_2d: initial residual:  3.00e-04              final residual: 3.00e-04                    delta_phi: 2.28e-03
+time v: 6.49e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.33e-05              final residual: 6.33e-05                    delta_phi: 3.28e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.66e-03
+
+--iter:175, max residul:1.70e-04, u:1.70e-04, v:1.50e-04, pp:5.58e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 175, u:-8.80e-02, v:-3.91e-01, p:-2.44e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 175, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.36e-04              final residual: 3.36e-04                    delta_phi: 2.43e-03
+time u: 6.75e-03
+residual history in solve_2d: initial residual:  2.97e-04              final residual: 2.97e-04                    delta_phi: 2.24e-03
+time v: 6.32e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.19e-05              final residual: 6.19e-05                    delta_phi: 3.24e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:176, max residul:1.68e-04, u:1.68e-04, v:1.48e-04, pp:1.93e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 176, u:-8.75e-02, v:-3.91e-01, p:-2.45e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 176, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  3.32e-04              final residual: 3.32e-04                    delta_phi: 2.40e-03
+time u: 6.63e-03
+residual history in solve_2d: initial residual:  2.93e-04              final residual: 2.93e-04                    delta_phi: 2.20e-03
+time v: 6.45e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  6.07e-05              final residual: 6.07e-05                    delta_phi: 3.20e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.62e-03
+
+--iter:177, max residul:1.66e-04, u:1.66e-04, v:1.47e-04, pp:4.07e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 177, u:-8.70e-02, v:-3.91e-01, p:-2.46e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 177, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  3.29e-04              final residual: 3.29e-04                    delta_phi: 2.38e-03
+time u: 6.75e-03
+residual history in solve_2d: initial residual:  2.90e-04              final residual: 2.90e-04                    delta_phi: 2.16e-03
+time v: 6.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.97e-05              final residual: 5.97e-05                    delta_phi: 3.15e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:178, max residul:1.64e-04, u:1.64e-04, v:1.45e-04, pp:8.57e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 178, u:-8.65e-02, v:-3.91e-01, p:-2.46e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 178, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.25e-04              final residual: 3.25e-04                    delta_phi: 2.36e-03
+time u: 6.73e-03
+residual history in solve_2d: initial residual:  2.86e-04              final residual: 2.86e-04                    delta_phi: 2.13e-03
+time v: 6.55e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.88e-05              final residual: 5.88e-05                    delta_phi: 3.10e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:179, max residul:1.62e-04, u:1.62e-04, v:1.43e-04, pp:5.20e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 179, u:-8.60e-02, v:-3.92e-01, p:-2.47e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 179, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  3.21e-04              final residual: 3.21e-04                    delta_phi: 2.34e-03
+time u: 6.58e-03
+residual history in solve_2d: initial residual:  2.83e-04              final residual: 2.83e-04                    delta_phi: 2.11e-03
+time v: 6.28e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.79e-05              final residual: 5.79e-05                    delta_phi: 3.06e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:180, max residul:1.61e-04, u:1.61e-04, v:1.42e-04, pp:1.51e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 180, u:-8.55e-02, v:-3.92e-01, p:-2.48e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 180, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.06e-02
+residual history in solve_2d: initial residual:  3.17e-04              final residual: 3.17e-04                    delta_phi: 2.32e-03
+time u: 6.72e-03
+residual history in solve_2d: initial residual:  2.80e-04              final residual: 2.80e-04                    delta_phi: 2.08e-03
+time v: 6.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.70e-05              final residual: 5.70e-05                    delta_phi: 3.03e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.57e-03
+
+--iter:181, max residul:1.59e-04, u:1.59e-04, v:1.40e-04, pp:1.31e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 181, u:-8.51e-02, v:-3.92e-01, p:-2.49e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 181, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.14e-04              final residual: 3.14e-04                    delta_phi: 2.29e-03
+time u: 6.64e-03
+residual history in solve_2d: initial residual:  2.77e-04              final residual: 2.77e-04                    delta_phi: 2.06e-03
+time v: 6.34e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.59e-05              final residual: 5.59e-05                    delta_phi: 2.99e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.52e-03
+
+--iter:182, max residul:1.57e-04, u:1.57e-04, v:1.38e-04, pp:1.07e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 182, u:-8.46e-02, v:-3.92e-01, p:-2.50e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 182, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.07e-02
+residual history in solve_2d: initial residual:  3.10e-04              final residual: 3.10e-04                    delta_phi: 2.27e-03
+time u: 6.74e-03
+residual history in solve_2d: initial residual:  2.73e-04              final residual: 2.73e-04                    delta_phi: 2.03e-03
+time v: 6.45e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.49e-05              final residual: 5.49e-05                    delta_phi: 2.96e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.61e-03
+
+--iter:183, max residul:1.55e-04, u:1.55e-04, v:1.37e-04, pp:6.67e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 183, u:-8.42e-02, v:-3.92e-01, p:-2.51e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 183, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.07e-04              final residual: 3.07e-04                    delta_phi: 2.24e-03
+time u: 6.74e-03
+residual history in solve_2d: initial residual:  2.70e-04              final residual: 2.70e-04                    delta_phi: 1.98e-03
+time v: 6.52e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.38e-05              final residual: 5.38e-05                    delta_phi: 2.92e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.50e-03
+
+--iter:184, max residul:1.53e-04, u:1.53e-04, v:1.35e-04, pp:6.61e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 184, u:-8.37e-02, v:-3.92e-01, p:-2.52e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 184, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  3.03e-04              final residual: 3.03e-04                    delta_phi: 2.22e-03
+time u: 6.66e-03
+residual history in solve_2d: initial residual:  2.67e-04              final residual: 2.67e-04                    delta_phi: 1.95e-03
+time v: 6.32e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.29e-05              final residual: 5.29e-05                    delta_phi: 2.88e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.59e-03
+
+--iter:185, max residul:1.52e-04, u:1.52e-04, v:1.34e-04, pp:1.04e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 185, u:-8.33e-02, v:-3.92e-01, p:-2.52e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 185, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  3.00e-04              final residual: 3.00e-04                    delta_phi: 2.20e-03
+time u: 6.71e-03
+residual history in solve_2d: initial residual:  2.64e-04              final residual: 2.64e-04                    delta_phi: 1.93e-03
+time v: 6.38e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.21e-05              final residual: 5.21e-05                    delta_phi: 2.84e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.67e-03
+
+--iter:186, max residul:1.50e-04, u:1.50e-04, v:1.32e-04, pp:8.78e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 186, u:-8.29e-02, v:-3.92e-01, p:-2.53e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 186, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  2.96e-04              final residual: 2.96e-04                    delta_phi: 2.18e-03
+time u: 6.85e-03
+residual history in solve_2d: initial residual:  2.61e-04              final residual: 2.61e-04                    delta_phi: 1.91e-03
+time v: 6.44e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.14e-05              final residual: 5.14e-05                    delta_phi: 2.80e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.54e-03
+
+--iter:187, max residul:1.48e-04, u:1.48e-04, v:1.31e-04, pp:7.70e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 187, u:-8.25e-02, v:-3.92e-01, p:-2.54e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 187, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  2.93e-04              final residual: 2.93e-04                    delta_phi: 2.16e-03
+time u: 6.58e-03
+residual history in solve_2d: initial residual:  2.58e-04              final residual: 2.58e-04                    delta_phi: 1.85e-03
+time v: 6.48e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  5.05e-05              final residual: 5.05e-05                    delta_phi: 2.76e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.48e-03
+
+--iter:188, max residul:1.46e-04, u:1.46e-04, v:1.29e-04, pp:7.91e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 188, u:-8.21e-02, v:-3.92e-01, p:-2.55e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 188, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  2.89e-04              final residual: 2.89e-04                    delta_phi: 2.13e-03
+time u: 6.72e-03
+residual history in solve_2d: initial residual:  2.55e-04              final residual: 2.55e-04                    delta_phi: 1.83e-03
+time v: 6.51e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.96e-05              final residual: 4.96e-05                    delta_phi: 2.73e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.53e-03
+
+--iter:189, max residul:1.45e-04, u:1.45e-04, v:1.28e-04, pp:1.57e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 189, u:-8.17e-02, v:-3.92e-01, p:-2.56e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 189, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  2.86e-04              final residual: 2.86e-04                    delta_phi: 2.11e-03
+time u: 6.69e-03
+residual history in solve_2d: initial residual:  2.52e-04              final residual: 2.52e-04                    delta_phi: 1.80e-03
+time v: 6.47e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.86e-05              final residual: 4.86e-05                    delta_phi: 2.69e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.57e-03
+
+--iter:190, max residul:1.43e-04, u:1.43e-04, v:1.26e-04, pp:2.33e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 190, u:-8.14e-02, v:-3.92e-01, p:-2.56e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 190, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.10e-02
+residual history in solve_2d: initial residual:  2.83e-04              final residual: 2.83e-04                    delta_phi: 2.09e-03
+time u: 6.71e-03
+residual history in solve_2d: initial residual:  2.49e-04              final residual: 2.49e-04                    delta_phi: 1.77e-03
+time v: 6.45e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.77e-05              final residual: 4.77e-05                    delta_phi: 2.65e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.40e-03
+
+--iter:191, max residul:1.41e-04, u:1.41e-04, v:1.25e-04, pp:4.66e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 191, u:-8.10e-02, v:-3.93e-01, p:-2.57e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 191, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  2.79e-04              final residual: 2.79e-04                    delta_phi: 2.06e-03
+time u: 6.60e-03
+residual history in solve_2d: initial residual:  2.46e-04              final residual: 2.46e-04                    delta_phi: 1.74e-03
+time v: 6.40e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.70e-05              final residual: 4.70e-05                    delta_phi: 2.62e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:192, max residul:1.40e-04, u:1.40e-04, v:1.23e-04, pp:5.69e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 192, u:-8.06e-02, v:-3.93e-01, p:-2.58e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 192, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  2.76e-04              final residual: 2.76e-04                    delta_phi: 2.04e-03
+time u: 6.74e-03
+residual history in solve_2d: initial residual:  2.44e-04              final residual: 2.44e-04                    delta_phi: 1.72e-03
+time v: 6.61e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.62e-05              final residual: 4.62e-05                    delta_phi: 2.59e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:193, max residul:1.38e-04, u:1.38e-04, v:1.22e-04, pp:3.79e-19, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 193, u:-8.03e-02, v:-3.93e-01, p:-2.59e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 193, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  2.73e-04              final residual: 2.73e-04                    delta_phi: 2.02e-03
+time u: 6.69e-03
+residual history in solve_2d: initial residual:  2.41e-04              final residual: 2.41e-04                    delta_phi: 1.69e-03
+time v: 6.41e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.52e-05              final residual: 4.52e-05                    delta_phi: 2.56e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.58e-03
+
+--iter:194, max residul:1.36e-04, u:1.36e-04, v:1.20e-04, pp:1.41e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 194, u:-8.00e-02, v:-3.93e-01, p:-2.59e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 194, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  2.70e-04              final residual: 2.70e-04                    delta_phi: 2.00e-03
+time u: 6.67e-03
+residual history in solve_2d: initial residual:  2.38e-04              final residual: 2.38e-04                    delta_phi: 1.66e-03
+time v: 6.37e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.43e-05              final residual: 4.43e-05                    delta_phi: 2.52e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.60e-03
+
+--iter:195, max residul:1.35e-04, u:1.35e-04, v:1.19e-04, pp:1.00e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 195, u:-7.96e-02, v:-3.93e-01, p:-2.60e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 195, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.09e-02
+residual history in solve_2d: initial residual:  2.66e-04              final residual: 2.66e-04                    delta_phi: 1.98e-03
+time u: 6.78e-03
+residual history in solve_2d: initial residual:  2.35e-04              final residual: 2.35e-04                    delta_phi: 1.63e-03
+time v: 6.55e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.38e-05              final residual: 4.38e-05                    delta_phi: 2.49e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.56e-03
+
+--iter:196, max residul:1.33e-04, u:1.33e-04, v:1.18e-04, pp:9.16e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 196, u:-7.93e-02, v:-3.93e-01, p:-2.61e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 196, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.11e-02
+residual history in solve_2d: initial residual:  2.63e-04              final residual: 2.63e-04                    delta_phi: 1.95e-03
+time u: 6.91e-03
+residual history in solve_2d: initial residual:  2.33e-04              final residual: 2.33e-04                    delta_phi: 1.61e-03
+time v: 6.46e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.32e-05              final residual: 4.32e-05                    delta_phi: 2.46e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.55e-03
+
+--iter:197, max residul:1.32e-04, u:1.32e-04, v:1.16e-04, pp:2.79e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 197, u:-7.90e-02, v:-3.93e-01, p:-2.61e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 197, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.12e-02
+residual history in solve_2d: initial residual:  2.60e-04              final residual: 2.60e-04                    delta_phi: 1.93e-03
+time u: 6.65e-03
+residual history in solve_2d: initial residual:  2.30e-04              final residual: 2.30e-04                    delta_phi: 1.58e-03
+time v: 6.45e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.25e-05              final residual: 4.25e-05                    delta_phi: 2.42e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.44e-03
+
+--iter:198, max residul:1.30e-04, u:1.30e-04, v:1.15e-04, pp:4.82e-18, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 198, u:-7.87e-02, v:-3.93e-01, p:-2.62e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 198, umax: 9.14e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.08e-02
+residual history in solve_2d: initial residual:  2.57e-04              final residual: 2.57e-04                    delta_phi: 1.91e-03
+time u: 6.64e-03
+residual history in solve_2d: initial residual:  2.28e-04              final residual: 2.28e-04                    delta_phi: 1.56e-03
+time v: 6.37e-03
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+residual history in solve_2d: initial residual:  4.17e-05              final residual: 4.17e-05                    delta_phi: 2.39e-04
+area_out 2.0
+flow_in 0.0 flow_out 0.0 area_out 2.0 flow_out_new 0.0 uinc: 0.0
+time pp: 7.51e-03
+
+--iter:199, max residul:1.29e-04, u:1.29e-04, v:1.14e-04, pp:1.13e-17, k:0.00e+00, om:0.00e+00
+
+
+monitor iteration: 199, u:-7.84e-02, v:-3.93e-01, p:-2.63e-02, k: 1.00e+00, om: 1.00e+00
+
+
+---iter: 199, umax: 9.15e-01,vismax: 1.00e+00, kmin: 1.00e+00, ommin: 1.00e+00
+
+time one iteration: 2.07e-02
+save_data called
+program reached normal stop
+4.69user 0.56system 0:06.81elapsed 77%CPU (0avgtext+0avgdata 75096maxresident)k
+72inputs+800outputs (0major+423014minor)pagefaults 0swaps

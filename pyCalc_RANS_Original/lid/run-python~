@@ -1,0 +1,7 @@
+#!/bin/bash
+# delete forst line
+sed  '/setup_case()/d' setup_case.py > temp_file
+# add new first line plus global declarations
+cat  ../global temp_file  modify_case.py  \
+../pyCALC-RANS.py  > exec-pyCALC-RANS.py;
+/usr/bin/time -a  -o out python -u  exec-pyCALC-RANS.py > out

@@ -1,0 +1,199 @@
+
+def modify_init(u3d,v3d,w3d,k3d,om3d,eps3d,vis3d):
+   
+   return u3d,v3d,w3d,k3d,om3d,eps3d,vis3d
+
+def modify_inlet():
+   return u_bc_west,v_bc_west,w_bc_west,k_bc_west,eps_bc_west,om_bc_west,u3d_face_w,convw
+
+def modify_conv(convw,convs,convl):
+
+   return convw,convs,convl
+
+def modify_u(su3d,sp3d):
+
+   su3d= su3d+vol
+
+   area=x2d[-1,1]*zmax
+   taus=np.sum(viscos*as_bound*u3d[:,0,:])/area
+   taun=np.sum(viscos*an_bound*u3d[:,-1,:])/area
+   sumvol=np.sum(vol)
+   uin=np.sum(convw[0,:,:])/(y2d[0,-1]-y2d[0,0])/zmax
+   total_forces=taus+taun
+
+   sumsu=np.sum(su3d)
+   sumsp=np.sum(sp3d)
+
+
+   print('area',area)
+
+   dpp=sumvol-(taus+taun)*area
+
+   print('uin=%7.3E,taus=%7.3E,taan=%7.3E,sumvol=%7.3E,dodx-tau=%7.3E,sumsu=%7.3E,sumsp=%7.3E' %(uin,taus,taun,sumvol,dpp,sumsu,sumsp))
+
+
+
+   return su3d,sp3d
+
+
+def modify_v(su3d,sp3d):
+
+   return su3d,sp3d
+
+
+def modify_w(su3d,sp3d):
+
+   return su3d,sp3d
+
+
+def modify_k(su3d,sp3d,gen):
+
+   comm_term=np.zeros((ni,nj,nk))
+
+   return su3d,sp3d,comm_term
+
+
+def modify_eps(su3d,sp3d):
+
+   return su3d,sp3d
+
+def modify_om(su3d,sp3d,comm_term):
+
+   return su3d,sp3d
+
+def modify_outlet(convw):
+
+   return convw,u_bc_east
+
+def modify_fk(fk3d):
+
+   global l_dist,l_max,l_iddes,rt,fmu,l_c,f_t,f_l,f_e1,l_u,l_tilde,f_d,f_e,f_b,f_dt,r_dt,r_dl,denom,s2
+
+   global f_e_mean,f_e1_mean,f_e2_mean,f_d_mean,f_dt_mean,f_dt_mean,f_b_mean,denom_mean,l_c_mean,l_tilde_mean
+
+   l_dist=0.15*dist3d
+   l_max=0.15*delta_max
+   dy=np.diff(y2d[1:,:],axis=1)
+# make it 3d
+   dy=np.repeat(dy[:,:,None],repeats=nk,axis=2)
+ 
+   l_temp=np.maximum(l_dist,l_max)
+   l_temp=np.maximum(l_temp,dy)
+   l_iddes=np.minimum(l_temp,delta_max)
+
+   l_c=cdes*l_iddes  #eq. 9
+
+   vist=vis3d-viscos
+   denom=kappa**2*dist3d**2*gen**0.5
+
+   r_dt=vist/denom  #eq. 22
+   r_dl=viscos/denom  #eq. 23
+
+   f_t=np.tanh((c_t**2*r_dt)**3)
+   f_l=np.tanh((c_l**2*r_dl)**10)
+
+   f_e2=1.-np.maximum(f_t,f_l) #eq. 19
+
+   alpha=0.25-dist3d/delta_max
+
+   f_e1=np.where(alpha <= 0,2*np.exp(-9*alpha**2),2*np.exp(-11.09*alpha**2))
+
+   f_b=  np.minimum(2.*np.exp(-9*alpha**2),1.)
+
+   f_dt=1.-np.tanh((8.*r_dt)**3)
+
+   f_e=np.maximum(f_e1-1.,0.)*f_e2
+
+   f_d=np.maximum((1.-f_dt),f_b)
+
+   eps3d=0.09*k3d*om3d
+   l_u=k3d**1.5/eps3d
+
+   l_tilde=f_d*(1+f_e)*l_u+(1-f_d)*l_c
+
+   fk3d=l_u/l_tilde
+
+   if iter == 0 and itstep ==0:
+      f_e_mean=np.zeros(nj)
+      f_e1_mean=np.zeros(nj)
+      f_e2_mean=np.zeros(nj)
+      f_d_mean=np.zeros(nj)
+      f_dt_mean=np.zeros(nj)
+      f_dt_mean=np.zeros(nj)
+      f_b_mean=np.zeros(nj)
+      l_c_mean=np.zeros(nj)
+      l_tilde_mean=np.zeros(nj)
+      denom_mean=np.zeros(nj)
+
+
+
+   if iter == 0 and itstep%itstep_stats == 0 and itstep >= itstep_start:
+      f_e_mean,f_d_mean,f_dt_mean,f_b_mean,denom_mean,f_e1_mean,f_e2_mean,l_c_mean,l_tilde_mean=\
+       aver_iddes(denom,f_e,f_e1,f_e2,f_d,f_dt,f_b,l_c,l_tilde,\
+       denom_mean,f_e_mean,f_e1_mean,f_e2_mean,f_d_mean,f_dt_mean,f_b_mean,l_c_mean,l_tilde_mean)
+
+   if iter == 0 and (itstep == ntstep-1 or itstep%itstep_save == 0):
+      print('IDDES functions saved')
+      np.save('f_e_mean', f_e_mean)
+      np.save('f_d_mean', f_d_mean)
+      np.save('l_c_mean', l_c_mean)
+      np.save('f_dt_mean',f_dt_mean)
+      np.save('f_b_mean',f_b_mean)
+      np.save('f_e1_mean',f_e1_mean)
+      np.save('f_e2_mean',f_e2_mean)
+      np.save('l_tilde_mean',l_tilde_mean)
+      np.save('denom_mean',denom_mean)
+
+   return fk3d
+
+def aver_iddes(denom,f_e,f_e1,f_e2,f_d,f_dt,f_b,l_c,l_tilde,\
+    denom_mean,f_e_mean,f_e1_mean,f_e2_mean,f_d_mean,f_dt_mean,f_b_mean,l_c_mean,l_tilde_mean):
+
+   f_e_mean=f_e_mean+np.mean(f_e,axis=(0,2))
+   f_e1_mean=f_e1_mean+np.mean(f_e1,axis=(0,2))
+   f_e2_mean=f_e2_mean+np.mean(f_e2,axis=(0,2))
+   f_d_mean=f_d_mean+np.mean(f_d,axis=(0,2))
+   l_c_mean=l_c_mean+np.mean(l_c,axis=(0,2))
+   l_tilde_mean=l_tilde_mean+np.mean(l_tilde,axis=(0,2))
+   f_dt_mean=f_dt_mean+np.mean(f_dt,axis=(0,2))
+   f_b_mean=f_b_mean+np.mean(f_b,axis=(0,2))
+   denom_mean=denom_mean+np.mean(denom,axis=(0,2))
+
+   return f_e_mean,f_d_mean,f_dt_mean,f_b_mean,denom_mean,f_e1_mean,f_e2_mean,l_c_mean,l_tilde_mean
+
+
+
+
+   return fk3d
+
+def fix_omega():
+
+# south wall
+   aw3d[:,0,:]=0
+   ae3d[:,0,:]=0
+   as3d[:,0,:]=0
+   an3d[:,0,:]=0
+   al3d[:,0,:]=0
+   ah3d[:,0,:]=0
+   ap_max=np.max(ap3d)
+   ap3d[:,0,:]=ap_max
+   su3d[:,0,:]=ap_max*om_bc_south
+
+
+# north wall
+   aw3d[:,-1,:]=0
+   ae3d[:,-1,:]=0
+   as3d[:,-1,:]=0
+   an3d[:,-1,:]=0
+   al3d[:,-1,:]=0
+   ah3d[:,-1,:]=0
+   ap3d[:,-1,:]=ap_max
+   su3d[:,-1,:]=ap_max*om_bc_north
+
+   return aw3d,ae3d,as3d,an3d,al3d,ah3d,ap3d,su3d,sp3d
+
+
+def modify_vis(vis3d):
+
+   return vis3d
+
