@@ -5,7 +5,7 @@ This was the project of the course "Project in Applied Mechanics" (TME131) at Ch
 
 The goal of the project was to convert a given CFD-sctipt to run completely on the GPU. The initial script had been written with no consideration of eventually being GPU converted, which meant that extensive rewriting had to be done. 
 
-The initial code was written in Python, and it was expected of us to also carry out the CUDA conversion using Python, using the Numba. Numba is a translational module which can take Python code and convert it to C++, which is the native language of CUDA. 
+The initial code was written in Python, and it was expected of us to also carry out the CUDA conversion using Python, using Numba. Numba is a translational module which can take Python code and convert it to C++, which is the native language of CUDA. 
 
 In this repo, there is a folder for three stages; firstly, the inital code that was given to us, secondly, the comprehensive rewriting needed to be done in order to be able to convert it. And thirdly, the final CUDA integrated code. 
 
